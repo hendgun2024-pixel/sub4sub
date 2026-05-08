@@ -49,6 +49,89 @@
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold flex items-center gap-2 text-shadow">
                 <i class="fa fa-globe"></i> Sub4Sub World
+<!-- ==============================================
+AI ADMIN STATUS - KHUSUS SUB4SUB WORLD
+Taruh kode ini DI BAWAH <body> atau DI ATAS konten utama
+============================================== -->
+<style>
+/* GAYA TAMPILAN KOTAK STATUS */
+.ai-admin-status {
+  background: #00b894;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 12px rgba(0,184,148,0.5);
+  animation: kedip 1.5s infinite alternate;
+}
+
+/* ANIMASI BERKEDIP HIJAU */
+@keyframes kedip {
+  from { opacity: 0.9; }
+  to { opacity: 1; box-shadow: 0 0 18px rgba(0,184,148,0.8); }
+}
+
+.ai-admin-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.ai-admin-teks {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5px;
+  display: block;
+}
+</style>
+
+<!-- BAGIAN TAMPILAN YANG MUNCUL -->
+<div class="ai-admin-status">
+  <span class="ai-admin-icon">🤖</span>
+  STATUS AI ADMIN: SEDANG BEKERJA ✅
+  <span class="ai-admin-teks" id="teksBerjalan">Sedang cek DANA 082260678214 | Pantau Sistem | Layani Member 24 Jam</span>
+</div>
+
+<!-- MENU LAPORAN (AKAN TAMBAH DI MENU ATAS) -->
+<style>
+.menu-laporan-ai {
+  background: #6c5ce7;
+  color: white !important;
+  padding: 8px 15px !important;
+  border-radius: 6px !important;
+  font-weight: bold !important;
+}
+</style>
+
+<script>
+// TEKS BERJALAN BERGERAK KANAN KIRI
+const teks = document.getElementById('teksBerjalan');
+const pesan = "✅ Sedang cek DANA 082260678214 | Pantau Sistem | Layani Member 24 Jam | Siap proses pembayaran otomatis ✅ ";
+let posisi = 0;
+
+function gerakTeks() {
+  posisi++;
+  if (posisi > pesan.length) posisi = 0;
+  teks.innerText = pesan.slice(posisi) + pesan.slice(0, posisi);
+}
+
+// JALANKAN SETIAP 200 MILIDETIK
+setInterval(gerakTeks, 200);
+
+// FUNGSI SIMULASI PROSES (NANTI DISAMBUNG KE SISTEM ASLI)
+function prosesPembayaran(nominal, nama) {
+  alert("✅ AI ADMIN: Pembayaran diterima dari " + nama + " sebesar Rp " + nominal + " → Koin sudah masuk otomatis!");
+}
+</script>
+
+<!-- ==============================================
+SELESAI - KODE INI AMAN & GAK AKAN HILANG
+============================================== -->
             </a>
             <!-- ✅ COIN BALANCE DISPLAY -->
             <div id="saldoCoin" class="coin-badge px-4 py-1 rounded-full shadow-md flex items-center gap-1">
