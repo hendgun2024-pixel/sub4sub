@@ -147,7 +147,8 @@ SELESAI - RAPI, MEWAH, COCOK 100%
             <div class="hidden md:flex gap-6">
                 <a href="#home" class="hover:text-yellow-300 transition font-medium">Home</a>
                 <a href="#earn" class="hover:text-yellow-300 transition font-medium">Earn Coins</a>
-                <a href="#services" class="hover:text-yellow-300 transition font-medium">Services</a>
+                <a href="#services" class="hover:text-yellow-300 Transition n
+ font-medium">Services</a>
                 <a href="#global-register" class="hover:text-yellow-300 transition font-medium font-bold">🌍 Worldwide Registration</a>
                 <!-- ✅ REDIRECT KE UTAMA -->
                 <a href="https://theglenndrasmusic.com/#chat" target="_blank" class="hover:text-yellow-300 transition font-medium">Live Chat</a>
@@ -196,71 +197,131 @@ SELESAI - RAPI, MEWAH, COCOK 100%
 </div>
     </section>
 
-      <!-- ✅ EARN COINS SECTION (SUDAH ADA) -->
-    <section id="earn" class="py-16 container mx-auto px-6">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-2 text-shadow">💰 How to Earn Coins</h2>
-            <p class="text-center mb-8 text-yellow-300 font-semibold">Complete tasks below, coins will be added automatically to your balance!</p>
-            <div class="bg-white/20 rounded-xl p-8 shadow-lg">
-                
-                <div class="space-y-4 mb-8">
-                    <!-- Task youtube -->
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-youtube-play text-red-500 text-2xl"></i>
-                            <div><p class="font-bold">Subscribe YouTube</p><p class="text-sm text-white/80">@theglenndrasmusic</p></div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="coin-badge px-2 py-1 rounded text-sm">+ 50 COINS</span>
-                            <button onclick="completeTask('youtube', 50)" id="btnYoutube" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
-                        </div>
-                    </div>
+      <<!-- ==============================================
+PERBAIKAN SISTEM TUGAS & KOIN - SUB4SUB WORLD
+Aturan: Cek HANYA akun medsos, bukan perangkat/IP
+============================================== -->
+<style>
+/* GAYA TUGAS RAPI & SESUAI WEB */
+.task-item {
+  background: linear-gradient(135deg, #7460E3 0%, #5B47D1 100%);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 3px 10px rgba(116, 96, 227, 0.25);
+}
+.task-done { background: linear-gradient(135deg, #00B894 0%, #009688 100%); }
+.task-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-yellow { background: #F1C40F; color: #000; }
+.btn-green { background: #2ECC71; color: #fff; }
+.btn-grey { background: #95A5A6; color: #fff; cursor: not-allowed; }
+</style>
 
-                    <!-- task instagram -->
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-instagram text-pink-500 text-2xl"></i>
-                            <div><p class="font-bold">Follow Instagram</p><p class="text-sm text-white/80">@theglenndrasmusic</p></div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="coin-badge px-2 py-1 rounded text-sm">+ 40 COINS</span>
-                            <button onclick="completeTask('instagram', 40)" id="btnInstagram" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
-                        </div>
-                    </div>
+<!-- BAGIAN TUGAS -->
+<div class="tasks-container">
+  <!-- TUGAS 1: SUBSCRIBE YOUTUBE -->
+  <div class="task-item" id="taskYt">
+    <div>
+      <span>📺 Subscribe YouTube</span><br>
+      <small>@theglenndrasmusic</small>
+    </div>
+    <div>
+      <span class="task-btn btn-yellow">+50 COINS</span>
+      <button class="task-btn btn-green" id="btnYt" onclick="cekTugas('yt')">Mark Done</button>
+    </div>
+  </div>
 
-                    <!-- task tiktok -->
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-tiktok text-black text-2xl"></i>
-                            <div><p class="font-bold">Follow TikTok</p><p class="text-sm text-white/80">@theglenndrasmusic</p></div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="coin-badge px-2 py-1 rounded text-sm">+ 40 COINS</span>
-                            <button onclick="completeTask('tiktok', 40)" id="btnTiktok" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
-                        </div>
-                    </div>
+  <!-- TUGAS 2: FOLLOW INSTAGRAM -->
+  <div class="task-item" id="taskIg">
+    <div>
+      <span>📷 Follow Instagram</span><br>
+      <small>@theglenndrasmusic</small>
+    </div>
+    <div>
+      <span class="task-btn btn-yellow">+40 COINS</span>
+      <button class="task-btn btn-green" id="btnIg" onclick="cekTugas('ig')">Mark Done</button>
+    </div>
+  </div>
 
-                    <!-- task whatsapp -->
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa fa-whatsapp text-green-500 text-2xl"></i>
-                            <div><p class="font-bold">Join Community Group</p><p class="text-sm text-white/80">Get daily updates</p></div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <span class="coin-badge px-2 py-1 rounded text-sm">+ 100 COINS</span>
-                            <button onclick="completeTask('whatsapp', 100)" id="btnWhatsapp" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
-                        </div>
-                    </div>
-                </div>
+  <!-- TUGAS 3: FOLLOW TIKTOK -->
+  <div class="task-item" id="taskTt">
+    <div>
+      <span>🎵 Follow TikTok</span><br>
+      <small>@theglenndrasmusic</small>
+    </div>
+    <div>
+      <span class="task-btn btn-yellow">+40 COINS</span>
+      <button class="task-btn btn-green" id="btnTt" onclick="cekTugas('tt')">Mark Done</button>
+    </div>
+  </div>
 
-                <div id="coinNotif" class="hidden bg-coin text-black font-bold p-3 rounded-lg text-center mb-4">
-                    ✅ Success! You earned <span id="earnedCoin">0</span> Coins! New Balance: <span id="newBalance">0</span>
-                </div>
+  <!-- TUGAS 4: JOIN GROUP -->
+  <div class="task-item" id="taskGrup">
+    <div>
+      <span>👥 Join Community Group</span><br>
+      <small>Get daily updates</small>
+    </div>
+    <div>
+      <span class="task-btn btn-yellow">+100 COINS</span>
+      <button class="task-btn btn-green" id="btnGrup" onclick="cekTugas('grup')">Mark Done</button>
+    </div>
+  </div>
+</div>
 
-                <p class="text-center text-yellow-300 font-bold">✅ Use coins to post your request and get followers/subscribers!</p>
-            </div>
-        </div>
-    </section>
+<script>
+// PENYIMPANAN KHUSUS: HANYA BERDASARKAN USERNAME AKUN MEDSOS
+let akunSudahAmbil = [];
+
+function ambilUsername(tipe) {
+  // Ambil username AKTIF yang dipakai sekarang
+  let uname = prompt("Masukkan Username Akun " + tipe.toUpperCase() + " kamu (tanpa @):");
+  if (!uname) return null;
+  return uname.trim().toLowerCase();
+}
+
+function cekTugas(tipe) {
+  let user = ambilUsername(tipe);
+  if (!user) return;
+
+  // ✅ ATURAN BARU: Cek HANYA apakah USERNAME ini pernah pakai
+  if (akunSudahAmbil.includes(tipe+"_"+user)) {
+    alert("⚠️ Maaf: Akun @" + user + " SUDAH PERNAH mengambil koin ini!");
+    return;
+  }
+
+  // ✅ Kalau BELUM PERNAH: Berikan koin
+  akunSudahAmbil.push(tipe+"_"+user);
+  tambahKoin(tipe);
+  document.getElementById("task"+tipe.toUpperCase()).classList.add("task-done");
+  document.getElementById("btn"+tipe.toUpperCase()).innerText = "Sudah Diambil";
+  document.getElementById("btn"+tipe.toUpperCase()).className = "task-btn btn-grey";
+  alert("✅ BERHASIL! +" + (tipe=='yt'?50:tipe=='grup'?100:40) + " Koin ditambahkan ke akun kamu!");
+}
+
+// Fungsi tambah koin ke saldo
+function tambahKoin(tipe) {
+  let saldo = parseInt(localStorage.getItem("saldoKoin") || "0");
+  let nilai = tipe=='yt' ? 50 : tipe=='ig'||tipe=='tt' ? 40 : 100;
+  saldo += nilai;
+  localStorage.setItem("saldoKoin", saldo);
+  document.querySelector(".saldo-koin").innerText = saldo + " Coins";
+}
+</script>
+
+<!-- ==============================================
+SELESAI: AKUN BARU PASTI DAPAT, AKUN LAMA DILARANG
+============================================== -->
+
 
     <!-- ✅ ✅ ✅ BAGIAN BARU: BELI KOIN DANA 082260678214 (PASANG DI SINI) ✅ ✅ ✅ -->
     <section id="buycoin" class="py-16 bg-white/10 backdrop-blur-md">
