@@ -50,88 +50,95 @@
             <a href="#" class="text-2xl font-bold flex items-center gap-2 text-shadow">
                 <i class="fa fa-globe"></i> Sub4Sub World
 <!-- ==============================================
-AI ADMIN STATUS - KHUSUS SUB4SUB WORLD
-Taruh kode ini DI BAWAH <body> atau DI ATAS konten utama
+AI ADMIN STATUS - VERSI MEWAH & COCOK WEB
 ============================================== -->
 <style>
-/* GAYA TAMPILAN KOTAK STATUS */
-.ai-admin-status {
-  background: #00b894;
-  color: white;
-  padding: 12px 20px;
-  text-align: center;
+/* KOTAK UTAMA - SESUAI WARNA WEB */
+.ai-admin-bar {
+  background: linear-gradient(135deg, #6C5CE7 0%, #4834D4 100%);
+  color: #ffffff;
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  margin: 15px auto;
-  width: 90%;
-  max-width: 800px;
-  box-shadow: 0 0 12px rgba(0,184,148,0.5);
-  animation: kedip 1.5s infinite alternate;
-}
-
-/* ANIMASI BERKEDIP HIJAU */
-@keyframes kedip {
-  from { opacity: 0.9; }
-  to { opacity: 1; box-shadow: 0 0 18px rgba(0,184,148,0.8); }
-}
-
-.ai-admin-icon {
-  font-size: 20px;
-  margin-right: 8px;
-}
-
-.ai-admin-teks {
   font-size: 14px;
-  font-weight: normal;
-  margin-top: 5px;
-  display: block;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin: 10px auto;
+  width: 92%;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: nyalaLembut 2s infinite alternate;
+}
+
+/* EFEK NYALA ELEGAN */
+@keyframes nyalaLembut {
+  from { box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3); }
+  to { box-shadow: 0 4px 20px rgba(108, 92, 231, 0.6); }
+}
+
+.ai-icon {
+  font-size: 20px;
+  filter: drop-shadow(0 0 4px #fff);
+}
+
+.ai-teks-utama {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.ai-pemisah {
+  opacity: 0.6;
+}
+
+.ai-status-hijau {
+  background: #00B894;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 6px rgba(0,184,148,0.4);
+}
+
+/* TEKS BERJALAN RAPI */
+.ai-teks-jalan {
+  font-size: 13px;
+  opacity: 0.9;
+  overflow: hidden;
+  white-space: nowrap;
 }
 </style>
 
-<!-- BAGIAN TAMPILAN YANG MUNCUL -->
-<div class="ai-admin-status">
-  <span class="ai-admin-icon">🤖</span>
-  STATUS AI ADMIN: SEDANG BEKERJA ✅
-  <span class="ai-admin-teks" id="teksBerjalan">Sedang cek DANA 082260678214 | Pantau Sistem | Layani Member 24 Jam</span>
+<!-- TAMPILAN AKHIR - RAPI & MEWAH -->
+<div class="ai-admin-bar">
+  <span class="ai-icon">🤖</span>
+  <span class="ai-teks-utama">AI ADMIN AKTIF</span>
+  <span class="ai-status-hijau">SEDANG BEKERJA ✅</span>
+  <span class="ai-pemisah">|</span>
+  <span class="ai-teks-jalan" id="teksJalan">Cek DANA: 082260678214 | Proses Pembayaran Otomatis | Jaga Sistem | Layani Member 24 Jam</span>
 </div>
 
-<!-- MENU LAPORAN (AKAN TAMBAH DI MENU ATAS) -->
-<style>
-.menu-laporan-ai {
-  background: #6c5ce7;
-  color: white !important;
-  padding: 8px 15px !important;
-  border-radius: 6px !important;
-  font-weight: bold !important;
-}
-</style>
-
 <script>
-// TEKS BERJALAN BERGERAK KANAN KIRI
-const teks = document.getElementById('teksBerjalan');
-const pesan = "✅ Sedang cek DANA 082260678214 | Pantau Sistem | Layani Member 24 Jam | Siap proses pembayaran otomatis ✅ ";
-let posisi = 0;
+// ANIMASI TEKS BERJALAN HALUS
+const teksEl = document.getElementById('teksJalan');
+const pesan = "✅ Cek DANA: 082260678214 | Proses Pembayaran Otomatis | Jaga Sistem | Layani Member 24 Jam | Aman & Cepat ✅ ";
+let pos = 0;
 
-function gerakTeks() {
-  posisi++;
-  if (posisi > pesan.length) posisi = 0;
-  teks.innerText = pesan.slice(posisi) + pesan.slice(0, posisi);
+function jalanTeks() {
+  pos++;
+  if (pos > pesan.length) pos = 0;
+  teksEl.innerText = pesan.slice(pos) + pesan.slice(0, pos);
 }
-
-// JALANKAN SETIAP 200 MILIDETIK
-setInterval(gerakTeks, 200);
-
-// FUNGSI SIMULASI PROSES (NANTI DISAMBUNG KE SISTEM ASLI)
-function prosesPembayaran(nominal, nama) {
-  alert("✅ AI ADMIN: Pembayaran diterima dari " + nama + " sebesar Rp " + nominal + " → Koin sudah masuk otomatis!");
-}
+setInterval(jalanTeks, 220);
 </script>
 
 <!-- ==============================================
-SELESAI - KODE INI AMAN & GAK AKAN HILANG
+SELESAI - RAPI, MEWAH, COCOK 100%
 ============================================== -->
+
             </a>
             <!-- ✅ COIN BALANCE DISPLAY -->
             <div id="saldoCoin" class="coin-badge px-4 py-1 rounded-full shadow-md flex items-center gap-1">
