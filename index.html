@@ -1,175 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sub4Sub World | theglenndrasmusic.com</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6a11cb',
-                        secondary: '#2575fc',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .scrollbar-hide {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-            .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-            }
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/ipapi.co@3.0.0/ipapi.min.js"></script>
-</head>
-<body class="bg-gradient-to-br from-primary to-secondary min-h-screen font-sans text-white">
-
-    <!-- Navbar -->
-    <nav class="bg-white/10 backdrop-blur-md border-b border-white/20 px-6 py-4 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold flex items-center gap-2">
-                <i class="fa fa-users"></i> Sub4Sub World
-            </a>
-            <div class="hidden md:flex gap-8">
-                <a href="#home" class="hover:text-yellow-300 transition">Home</a>
-                <a href="#rules" class="hover:text-yellow-300 transition">Rules</a>
-                <a href="#services" class="hover:text-yellow-300 transition">Services</a>
-                <a href="#about" class="hover:text-yellow-300 transition">About</a>
-                <a href="https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh" target="_blank" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded-lg transition flex items-center gap-1">
-                    <i class="fa fa-whatsapp"></i> WA Group
-                </a>
-            </div>
-            <button class="md:hidden text-2xl">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="container mx-auto px-6 pt-28 pb-16">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 space-y-6">
-                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-tight">
-                    Grow Your Account <span class="text-yellow-300">Together</span>
-                </h1>
-                <p class="text-lg text-white/80">Global community to follow, subscribe, like & comment each other. Safe, free, and active 24/7!</p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#rules" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Read Rules First</a>
-                    <a href="#services" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">Learn More</a>
+                    <h3 class="font-bold text-lg mt-4 mb-2">2. Cookies and Web Beacons</h3>
+                    <p>Sub4Sub World uses 'cookies' to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+                    
+                    <h3 class="font-bold text-lg mt-4 mb-2">3. Google AdSense</h3>
+                    <p>We use Google AdSense to display advertisements. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" class="text-yellow-300 underline">Google Ads Settings</a>.</p>
+                    
+                    <h3 class="font-bold text-lg mt-4 mb-2">4. Third Party Privacy Policies</h3>
+                    <p>Our Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.</p>
+                    
+                    <h3 class="font-bold text-lg mt-4 mb-2">5. Children's Information</h3>
+                    <p>We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. Sub4Sub World does not knowingly collect any Personal Identifiable Information from children under the age of 13.</p>
+                    
+                    <h3 class="font-bold text-lg mt-4 mb-2">6. Consent</h3>
+                    <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
                 </div>
-            </div>
-            <div class="md:w-1/2">
-                <img src="https://picsum.photos/id/3/600/400" alt="Global Community" class="rounded-2xl shadow-2xl w-full h-auto">
             </div>
         </div>
     </section>
 
-    <!-- RULES SECTION - SYARAT WAJIB FOLLOW -->
-    <section id="rules" class="bg-white/10 backdrop-blur-md py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-8">⚠️ MANDATORY RULES TO JOIN</h2>
-            <div class="max-w-2xl mx-auto bg-white/20 rounded-xl p-8 shadow-lg">
-                <p class="text-lg mb-6 text-center">To become a member & join our group, you <span class="text-yellow-300 font-bold">MUST FOLLOW / SUBSCRIBE</span> all 3 accounts below first:</p>
+    <!-- Terms of Service - WAJIB ADSENSE -->
+    <section id="terms" class="py-16 container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8 text-shadow">Terms of Service</h2>
+            <div class="bg-white/20 rounded-xl p-8 shadow-lg text-sm leading-relaxed">
+                <p class="mb-4"><strong>Last updated:</strong> May 8, 2026</p>
                 
-                <div class="space-y-4 mb-8">
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between">
-                        <span class="font-semibold flex items-center gap-2"><i class="fa fa-youtube-play text-red-500"></i> YouTube: @theglenndrasmusic</span>
-                        <a href="https://youtube.com/@theglenndrasmusic" target="_blank" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm">Subscribe</a>
-                    </div>
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between">
-                        <span class="font-semibold flex items-center gap-2"><i class="fa fa-instagram text-pink-500"></i> Instagram: @theglenndrasmusic</span>
-                        <a href="https://instagram.com/theglenndrasmusic" target="_blank" class="bg-pink-500 hover:bg-pink-600 px-3 py-1 rounded text-sm">Follow</a>
-                    </div>
-                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between">
-                        <span class="font-semibold flex items-center gap-2"><i class="fa fa-tiktok text-black"></i> TikTok: @theglenndrasmusic</span>
-                        <a href="https://tiktok.com/@theglenndrasmusic" target="_blank" class="bg-black/70 hover:bg-black px-3 py-1 rounded text-sm">Follow</a>
-                    </div>
-                </div>
-
-                <p class="text-center text-yellow-300 font-bold">✅ After following all 3, you can chat & join below ⬇️</p>
+                <p class="mb-4">By accessing and using <strong>Sub4Sub World</strong> (https://sub4subworld.theglenndrasmusic.com), you accept and agree to be bound by the terms and provisions of this agreement. You must be at least 13 years old to use this service.</p>
+                
+                <h3 class="font-bold text-lg mt-4 mb-2">1. Use License</h3>
+                <p>Permission is granted to temporarily access the materials on Sub4Sub World's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose; attempt to decompile or reverse engineer any software contained on Sub4Sub World's website; remove any copyright or other proprietary notations from the materials.</p>
+                
+                <h3 class="font-bold text-lg mt-4 mb-2">2. Rules & Conduct</h3>
+                <p>Users agree not to use this platform for any illegal or unauthorized purpose. You must follow all applicable laws. You are strictly prohibited from posting spam, offensive content, harmful links, or any material that violates copyright laws. Membership requires following our official social accounts as stated; failure to maintain this may result in removal.</p>
+                
+                <h3 class="font-bold text-lg mt-4 mb-2">3. Disclaimer</h3>
+                <p>The materials on Sub4Sub World's website are provided on an 'as is' basis. Sub4Sub World makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                
+                <h3 class="font-bold text-lg mt-4 mb-2">4. Limitations</h3>
+                <p>In no event shall Sub4Sub World or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Sub4Sub World's website.</p>
+                
+                <h3 class="font-bold text-lg mt-4 mb-2">5. Governing Law</h3>
+                <p>These terms and conditions are governed by and construed in accordance with international laws and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-16">
+    <!-- Contact Us - WAJIB ADSENSE -->
+    <section id="contact" class="bg-white/10 backdrop-blur-md py-16">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
-                    <i class="fa fa-youtube-play text-red-500 text-4xl mb-3"></i>
-                    <h3 class="font-semibold text-lg">YouTube</h3>
-                    <p class="text-sm text-white/80">Subscribe & Watch Time</p>
-                </div>
-                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
-                    <i class="fa fa-instagram text-pink-500 text-4xl mb-3"></i>
-                    <h3 class="font-semibold text-lg">Instagram</h3>
-                    <p class="text-sm text-white/80">Follow & Like</p>
-                </div>
-                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
-                    <i class="fa fa-tiktok text-black text-4xl mb-3"></i>
-                    <h3 class="font-semibold text-lg">TikTok</h3>
-                    <p class="text-sm text-white/80">Follow & Like</p>
-                </div>
-                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
-                    <i class="fa fa-facebook-square text-blue-600 text-4xl mb-3"></i>
-                    <h3 class="font-semibold text-lg">Facebook</h3>
-                    <p class="text-sm text-white/80">Friend & Share</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-center mb-8 text-shadow">Contact Us</h2>
+                <div class="bg-white/20 rounded-xl p-8 shadow-lg">
+                    <p class="mb-6">If you have any questions, concerns, or support requests regarding our platform, feel free to contact us:</p>
+                    
+                    <div class="space-y-3 text-lg">
+                        <p class="flex items-center justify-center gap-3"><i class="fa fa-globe text-yellow-300"></i> Website: theglenndrasmusic.com</p>
+                        <p class="flex items-center justify-center gap-3"><i class="fa fa-envelope text-yellow-300"></i> Email: contact@theglenndrasmusic.com</p>
+                        <p class="flex items-center justify-center gap-3"><i class="fa fa-map-marker text-yellow-300"></i> Location: Global / Indonesia</p>
+                    </div>
 
-    <!-- CHAT BOT: ENGLISH + COUNTRY + RULES -->
-    <section id="join" class="py-16 container mx-auto px-6">
-        <div class="max-w-lg mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-6">🤖 Sub4Sub World Receptionist</h2>
-            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <div class="bg-primary text-white py-3 px-4 text-center font-bold">
-                    Global Service • 24/7 Online
-                </div>
-                <div id="chatBox" class="h-[400px] overflow-y-auto p-4 bg-gray-50 scrollbar-hide"></div>
-                <div class="flex gap-2 p-4 border-t">
-                    <input type="text" id="userInput" placeholder="Type your name only (after following all accounts)" class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
-                    <button id="sendBtn" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold transition">Send</button>
+                    <div class="mt-8">
+                        <a href="https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-semibold transition shadow-md">
+                            <i class="fa fa-whatsapp mr-2"></i> Direct WhatsApp Chat
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black/20 py-8 text-center text-white/70 text-sm">
-        <p>© 2026 Sub4Sub World | Powered by theglenndrasmusic.com</p>
+    <footer class="bg-dark/40 py-8 text-center text-white/80 text-sm">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">© 2026 Sub4Sub World | All Rights Reserved</p>
+            <p>Managed by <strong>theglenndrasmusic.com</strong> | Safe & Trusted Community</p>
+            <div class="mt-4 space-x-4">
+                <a href="#privacy" class="hover:text-yellow-300 transition">Privacy Policy</a>
+                <a href="#terms" class="hover:text-yellow-300 transition">Terms of Service</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- SCRIPT BOT: LENGKAP SEMUA FITUR -->
+    <!-- ✅ SCRIPT BOT LENGKAP: ATURAN + NEGARA + BAHASA INGGRIS -->
     <script>
         const chatBox = document.getElementById('chatBox');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
         let userCountry = "Global";
 
-        // Detect Country
+        // Deteksi Negara Otomatis
         ipapi.location(function(res) {
             if(res && res.country_name) userCountry = res.country_name;
         });
 
-        // Get Time
+        // Ambil Waktu Lengkap
         function getFullTime() {
             const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const now = new Date();
@@ -181,7 +105,7 @@
             };
         }
 
-        // Add Message
+        // Tampil Pesan
         function addMessage(text, type) {
             const div = document.createElement('div');
             div.className = `mb-3 p-3 rounded-xl max-w-[80%] ${type === 'bot' ? 'bg-gray-200 text-gray-800 mr-auto' : 'bg-secondary text-white ml-auto'}`;
@@ -190,28 +114,26 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        // Bot Reply LOGIC (SUDAH ADA SYARAT FOLLOW)
+        // Logika Jawaban Bot
         function botReply(userText) {
             const { day, hours, minutes, year } = getFullTime();
             const text = userText.trim().toLowerCase();
 
-            // Kalau sapa → ingatkan syarat
             if (/hello|hi|hey|good morning|good afternoon|good evening/i.test(text)) {
                 return `👋 Hello! Welcome to Sub4Sub World 🌍
 
-⚠️ **IMPORTANT RULE FIRST**:
-You MUST FOLLOW / SUBSCRIBE all 3 accounts below before joining:
+⚠️ **MANDATORY RULE BEFORE JOINING**:
+You MUST FOLLOW / SUBSCRIBE all 3 official accounts below:
 ✅ YouTube: @theglenndrasmusic
 ✅ Instagram: @theglenndrasmusic
 ✅ TikTok: @theglenndrasmusic
 
-After following all, please type your name only to continue 😊`;
+After completing all, please type your FULL NAME only to register 😊`;
             }
 
-            // Kalau sudah ketik NAMA → BERES, TAMPILKAN SEMUA + LINK WA
             if (userText.length > 1 && !/yes|no|thanks|help/i.test(text)) {
                 const name = userText.trim();
-                return `✅ **VERIFIED & WELCOMED!** 🎉
+                return `✅ **REGISTRATION SUCCESSFUL!** 🎉
 
 👤 Name: ${name}
 📍 Country: ${userCountry}
@@ -219,19 +141,18 @@ After following all, please type your name only to continue 😊`;
 ⏰ Time: ${hours}:${minutes}
 📆 Year: ${year}
 
-✅ You have followed all accounts → YOU ARE OFFICIALLY A MEMBER! 🎊
+✅ Verified Member — You have followed all required accounts ✅
 
-👉 **Join our WhatsApp Group here**:
+👉 **JOIN OFFICIAL WHATSAPP GROUP**:
 https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh
 
-Enjoy our community, grow your account, and make friends worldwide! 🚀🌍`;
+Welcome to our global family! Grow, support, and connect worldwide 🚀🌍`;
             }
 
-            // Kalau tulisan lain
             return `🙏 Sorry! Please follow all 3 accounts first, then type ONLY YOUR NAME to register 😊`;
         }
 
-        // Process Chat
+        // Proses Kirim Pesan
         function processChat() {
             const text = userInput.value.trim();
             if (!text) return;
@@ -243,13 +164,14 @@ Enjoy our community, grow your account, and make friends worldwide! 🚀🌍`;
         sendBtn.addEventListener('click', processChat);
         userInput.addEventListener('keypress', e => e.key === 'Enter' && processChat());
 
-        // Opening Message
+        // Pesan Awal
         window.onload = () => {
             addMessage(`🤖 Welcome to **Sub4Sub World** 🌍
-Global Community for creators!
+Global Community for Creators Worldwide!
 
-⚠️ **REQUIREMENT**: Follow all 3 accounts @theglenndrasmusic first, then type your name to get group link 😊`, 'bot');
+⚠️ Requirement: Follow all 3 accounts @theglenndrasmusic first, then type your name to get group link 😊`, 'bot');
         };
     </script>
+
 </body>
 </html>
