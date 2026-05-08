@@ -3,235 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Glenndras Music - Sub4Sub</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Penerima Tamu - Sub4Sub World</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        .card-hover { transition: 0.3s; }
-        .card-hover:hover { transform: translateY(-8px); }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .ai-balas { background: rgba(59, 130, 246, 0.2); border-radius: 10px; padding: 6px 10px; margin: 4px 0; }
-        .disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .chat-header {
+            background: #6a11cb;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 12px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+        .bot {
+            background: #e9ecef;
+            color: #333;
+            margin-right: auto;
+        }
+        .user {
+            background: #2575fc;
+            color: white;
+            margin-left: auto;
+        }
+        .input-area {
+            display: flex;
+            padding: 15px;
+            gap: 10px;
+            background: white;
+            border-top: 1px solid #ddd;
+        }
+        #userInput {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        #sendBtn {
+            padding: 12px 20px;
+            background: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #sendBtn:hover {
+            background: #5a0fb8;
+        }
     </style>
 </head>
 <body>
-    <div class="container mx-auto px-4 py-8">
-        <!-- Header -->
-        <header class="text-center mb-12">
-            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-3">🎵 THE GLENNDRAS MUSIC 🎵</h1>
-            <p class="text-lg text-white/80">Platform Berbagi Subscribe & Komunitas</p>
-            <p class="text-yellow-300 text-sm mt-2">🤖 AI Agent Aktif • Otomatis Balas & Daftarkan Anggota</p>
-        </header>
-
-        <!-- Menu Tab -->
-        <div class="flex justify-center gap-3 mb-10 flex-wrap">
-            <button class="tab-btn bg-white/20 text-white px-5 py-2.5 rounded-lg active" data-tab="home">Beranda</button>
-            <button class="tab-btn bg-white/20 text-white px-5 py-2.5 rounded-lg" data-tab="video">Video Kami</button>
-            <button class="tab-btn bg-white/20 text-white px-5 py-2.5 rounded-lg" data-tab="chat">Live Chat + AI</button>
-            <button class="tab-btn bg-white/20 text-white px-5 py-2.5 rounded-lg" data-tab="daftar">Daftar Anggota</button>
-            <button class="tab-btn bg-white/20 text-white px-5 py-2.5 rounded-lg" data-tab="list">Daftar Baru</button>
+    <div class="chat-container">
+        <div class="chat-header">🤖 Penerima Tamu Sub4Sub World</div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Tulis nama atau sapa disini...">
+            <button id="sendBtn">Kirim</button>
         </div>
-
-        <!-- BERANDA -->
-        <div id="home" class="tab-content active">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-                <a href="https://www.youtube.com/@theglenndrasmusic" target="_blank" class="bg-white/10 backdrop-blur-lg rounded-2xl p-7 text-center text-white card-hover border border-white/20">
-                    <i class="fab fa-youtube text-5xl mb-3 text-red-500"></i>
-                    <h3 class="text-xl font-bold mb-1">YouTube</h3>
-                    <p class="text-white/70 text-sm">Subscribe Channel Kami</p>
-                </a>
-                <a href="https://www.tiktok.com/@theglenndrasmusic" target="_blank" class="bg-white/10 backdrop-blur-lg rounded-2xl p-7 text-center text-white card-hover border border-white/20">
-                    <i class="fab fa-tiktok text-5xl mb-3 text-black"></i>
-                    <h3 class="text-xl font-bold mb-1">TikTok</h3>
-                    <p class="text-white/70 text-sm">Follow & Support</p>
-                </a>
-                <a href="https://web.facebook.com/hendra.gunawan.957654/" target="_blank" class="bg-white/10 backdrop-blur-lg rounded-2xl p-7 text-center text-white card-hover border border-white/20">
-                    <i class="fab fa-facebook text-5xl mb-3 text-blue-500"></i>
-                    <h3 class="text-xl font-bold mb-1">Facebook</h3>
-                    <p class="text-white/70 text-sm">Like & Follow Page</p>
-                </a>
-                <a href="https://www.instagram.com/theglenndrasmusic" target="_blank" class="bg-white/10 backdrop-blur-lg rounded-2xl p-7 text-center text-white card-hover border border-white/20">
-                    <i class="fab fa-instagram text-5xl mb-3 text-pink-500"></i>
-                    <h3 class="text-xl font-bold mb-1">Instagram</h3>
-                    <p class="text-white/70 text-sm">Update Terbaru</p>
-                </a>
-                <a href="https://threads.com/@theglenndrasmusic" target="_blank" class="bg-white/10 backdrop-blur-lg rounded-2xl p-7 text-center text-white card-hover border border-white/20">
-                    <i class="fab fa-threads text-5xl mb-3 text-gray-800"></i>
-                    <h3 class="text-xl font-bold mb-1">Threads</h3>
-                    <p class="text-white/70 text-sm">Diskusi & Info</p>
-                </a>
-                <a href="https://open.spotify.com/playlist/5m0HgphVUa3K3I43Z831gA" target="_blank" class="bg-white/10 backdrop-blur-lg rounded-2xl p-7 text-center text-white card-hover border border-white/20">
-                    <i class="fab fa-spotify text-5xl mb-3 text-green-500"></i>
-                    <h3 class="text-xl font-bold mb-1">Spotify</h3>
-                    <p class="text-white/70 text-sm">Dengarkan Playlist</p>
-                </a>
-            </div>
-        </div>
-
-        <!-- VIDEO KAMU -->
-        <div id="video" class="tab-content max-w-3xl mx-auto">
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/20">
-                <h3 class="text-xl font-bold text-white mb-4 text-center">🎬 Video Terbaru Kami</h3>
-                <div class="aspect-video w-full rounded-lg overflow-hidden">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MH1ooHCwlrU?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <p class="text-white/80 text-center mt-3 text-sm">Tonton & Bagikan karya kami 🎵</p>
-            </div>
-        </div>
-
-        <!-- CHAT + AI -->
-        <div id="chat" class="tab-content max-w-lg mx-auto">
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/20">
-                <h3 class="text-xl font-bold text-white mb-3 text-center">💬 Live Chat • AI Dola 🤖</h3>
-                <div id="chat-box" class="bg-white/5 rounded-lg p-3 h-[300px] overflow-y-auto mb-3 space-y-1 text-white text-sm">
-                    <p class="text-blue-300">🤖 Halo! Siap balas pesan otomatis ✨</p>
-                </div>
-                <div class="flex gap-2">
-                    <input type="text" id="nama" placeholder="Nama..." class="w-1/3 px-3 py-2 rounded-lg border-0 text-sm">
-                    <input type="text" id="pesan" placeholder="Tulis pesan..." class="flex-1 px-3 py-2 rounded-lg border-0 text-sm">
-                    <button id="kirim" class="bg-blue-500 text-white px-3 py-2 rounded-lg text-sm">Kirim</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAFTAR • SYARAT WAJIB FOLLOW 3 AKUN -->
-        <div id="daftar" class="tab-content max-w-sm mx-auto">
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/20">
-                <h3 class="text-xl font-bold text-white mb-2 text-center">📝 Daftar Anggota Baru</h3>
-                <p class="text-yellow-300 text-xs mb-4 text-center">⚠️ SYARAT WAJIB: Buka & Follow 3 akun di bawah dulu ✅</p>
-
-                <div class="space-y-2 mb-4">
-                    <a href="https://www.youtube.com/@theglenndrasmusic" target="_blank" class="block bg-red-500/20 hover:bg-red-500/40 text-white p-2 rounded-lg text-sm">
-                        <i class="fab fa-youtube mr-2"></i> 1. YouTube @theglenndrasmusic
-                    </a>
-                    <a href="https://www.tiktok.com/@theglenndrasmusic" target="_blank" class="block bg-black/20 hover:bg-black/40 text-white p-2 rounded-lg text-sm">
-                        <i class="fab fa-tiktok mr-2"></i> 2. TikTok @theglenndrasmusic
-                    </a>
-                    <a href="https://www.instagram.com/theglenndrasmusic" target="_blank" class="block bg-pink-500/20 hover:bg-pink-500/40 text-white p-2 rounded-lg text-sm">
-                        <i class="fab fa-instagram mr-2"></i> 3. Instagram @theglenndrasmusic
-                    </a>
-                </div>
-
-                <div class="text-white text-xs mb-3 text-center" id="infoSyarat">🔄 Belum lengkap, buka semua link dulu</div>
-
-                <form id="formDaftar" class="space-y-3 text-sm">
-                    <div><label class="text-white block mb-1">Nama Lengkap</label><input type="text" id="dnama" class="w-full px-3 py-2 rounded-lg border-0" required></div>
-                    <div><label class="text-white block mb-1">Email</label><input type="email" id="demail" class="w-full px-3 py-2 rounded-lg border-0" required></div>
-                    <div><label class="text-white block mb-1">Username</label><input type="text" id="duser" class="w-full px-3 py-2 rounded-lg border-0" required></div>
-                    <div><label class="text-white block mb-1">Password</label><input type="password" id="dpass" class="w-full px-3 py-2 rounded-lg border-0" required></div>
-                    <button type="submit" id="btnDaftar" class="w-full bg-green-500 text-white py-2.5 rounded-lg font-medium disabled hover:bg-green-600">❌ BELUM BISA DAFTAR</button>
-                </form>
-
-                <div id="sukses" class="hidden mt-3 p-3 bg-green-500/20 rounded-lg text-white text-center text-sm">
-                    ✅ <span id="namaBaru"></span> resmi jadi anggota 🎉<br>
-                    <a href="https://www.youtube.com/@theglenndrasmusic" target="_blank" class="text-yellow-300 underline mt-1 inline-block">👉 Tetap dukung kami ya!</a>
-                </div>
-            </div>
-        </div>
-        <!-- LIST ANGGOTA -->
-        <div id="list" class="tab-content max-w-lg mx-auto">
-            <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-5 border border-white/20">
-                <h3 class="text-xl font-bold text-white mb-3 text-center">👥 Daftar Anggota Terdaftar</h3>
-                <div id="daftarList" class="space-y-2 text-white text-sm"><p class="text-white/70 italic">Belum ada anggota baru...</p></div>
-            </div>
-        </div>
-
-        <footer class="text-center mt-12 text-white/50 text-xs">© 2026 The Glenndras Music • AI Agent Dola 💖</footer>
     </div>
 
     <script>
-        // MENU
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.onclick=()=>{
-                document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('bg-white/40','active'));
-                btn.classList.add('bg-white/40','active');
-                document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-                document.getElementById(btn.dataset.tab).classList.add('active');
-            }
-        });
+        const chatBox = document.getElementById('chatBox');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
 
-        // CEK SYARAT FOLLOW 3 AKUN
-        let sudahBuka = [false, false, false];
-        const linkWajib = document.querySelectorAll('#daftar a');
-        const btnDaftar = document.getElementById('btnDaftar');
-        const infoTeks = document.getElementById('infoSyarat');
-
-        linkWajib.forEach((link, idx) => {
-            link.onclick = () => {
-                sudahBuka[idx] = true;
-                link.style.opacity = '0.7';
-                cekSemuaLengkap();
-            }
-        });
-
-        function cekSemuaLengkap(){
-            if(sudahBuka[0] && sudahBuka[1] && sudahBuka[2]){
-                btnDaftar.classList.remove('disabled');
-                btnDaftar.innerText = '✅ DAFTAR & GABUNG SEKARANG';
-                infoTeks.innerText = '✅ Semua syarat terpenuhi! Silakan isi data';
-                infoTeks.classList.add('text-green-300');
-            }
+        // Fungsi ambil hari, jam, tahun otomatis
+        function getWaktuLengkap() {
+            const hariNama = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const sekarang = new Date();
+            const hari = hariNama[sekarang.getDay()];
+            const jam = sekarang.getHours().toString().padStart(2, '0');
+            const menit = sekarang.getMinutes().toString().padStart(2, '0');
+            const tahun = sekarang.getFullYear();
+            return { hari, jam, menit, tahun };
         }
 
-        // AI CHAT
-        const chatBox=document.getElementById('chat-box');
-        const kirim=document.getElementById('kirim');
-        const nama=document.getElementById('nama');
-        const pesan=document.getElementById('pesan');
-
-        function aiBalas(txt){
-            let jwb='';
-            if(txt.includes('halo')||txt.includes('hai')) jwb='Halo juga! Selamat datang di komunitas kami 🎵';
-            else if(txt.includes('sub')||txt.includes('subscribe')) jwb='Siap! Di sini kita saling dukung & saling sub ya 😊';
-            else if(txt.includes('daftar')) jwb='Wajib follow 3 akun kami dulu ya, baru bisa masuk ✅';
-            else if(txt.includes('makasih')) jwb='Sama-sama! Semangat terus berkarya ya 🥰';
-            else jwb='Terima kasih pesannya! Ada yang perlu dibantu?';
-            const el=document.createElement('p');
-            el.className='ai-balas';
-            el.innerHTML=`<strong class="text-blue-300">🤖 AI:</strong> ${jwb}`;
-            chatBox.appendChild(el);
-            chatBox.scrollTop=chatBox.scrollHeight;
+        // Tambah pesan ke layar
+        function tambahPesan(teks, tipe) {
+            const div = document.createElement('div');
+            div.className = `message ${tipe}`;
+            div.textContent = teks;
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        kirim.onclick=()=>{
-            const n=pesan.value.trim()?nama.value.trim()||'Tamu':'';
-            const p=pesan.value.trim();
-            if(p){
-                const u=document.createElement('p');
-                u.innerHTML=`<strong class="text-yellow-300">${n}:</strong> ${p}`;
-                chatBox.appendChild(u);
-                setTimeout(()=>aiBalas(p.toLowerCase()),500);
-                pesan.value='';
+        // Jawaban bot khusus penerima tamu
+        function jawabBot(pesanUser) {
+            const { hari, jam, menit, tahun } = getWaktuLengkap();
+            const nama = pesanUser.trim();
+
+            // Kalau cuma sapa, minta nama
+            if (/halo|hai|assalamualaikum|selamat pagi|selamat siang|selamat sore|selamat malam/i.test(nama)) {
+                return `👋 Halo! Selamat datang di Sub4Sub World 😊 Boleh saya tahu siapa nama Anda?`;
             }
-        };
 
-        // DAFTAR ANGGOTA
-        const form=document.getElementById('formDaftar');
-        const sukses=document.getElementById('sukses');
-        const namaBaru=document.getElementById('namaBaru');
-        const daftarList=document.getElementById('daftarList');
-        let anggota=[];
+            // Kalau sudah sebut nama → kasih sambutan lengkap
+            if (nama.length > 1 && !/iya|tidak|makasih|terima kasih/i.test(nama)) {
+                return `✅ Selamat datang **${nama}**! Terima kasih sudah bergabung bersama kami 🎉
+🗓️ Hari : ${hari}
+⏰ Jam : ${jam}:${menit} WIB
+📆 Tahun : ${tahun}
 
-        form.onsubmit=e=>{
-            e.preventDefault();
-            const dt={
-                nama:document.getElementById('dnama').value,
-                email:document.getElementById('demail').value,
-                user:document.getElementById('duser').value
-            };
-            anggota.push(dt);
+Semoga betah dan sukses selalu ya di sini! 🙌`;
+            }
 
-            namaBaru.innerText = dt.nama;
-            form.classList.add('hidden');
-            sukses.classList.remove('hidden');
+            // Kalau tulisan gak jelas
+            return `🙏 Maaf, saya cuma penerima tamu. Silakan sebutkan nama Anda saja ya, nanti saya sapa lengkap sama waktunya 😊`;
+        }
 
-            if (daftarList.innerText.includes('Belum ada')) daftarList.innerHTML = '';
-            const li = document.createElement('div');
-            li.className = 'p-2 bg-white/10 rounded-lg';
-            li.innerHTML = `✅ ${dt.nama} | @${dt.user}`;
-            daftarList.appendChild(li);
+        // Kirim pesan saat klik tombol / tekan enter
+        function prosesChat() {
+            const teks = userInput.value.trim();
+            if (!teks) return;
+
+            tambahPesan(teks, 'user');
+            userInput.value = '';
+
+            setTimeout(() => {
+                const balasan = jawabBot(teks);
+                tambahPesan(balasan, 'bot');
+            }, 800);
+        }
+
+        sendBtn.addEventListener('click', prosesChat);
+        userInput.addEventListener('keypress', (e) => e.key === 'Enter' && prosesChat());
+
+        // Pesan pembuka pas buka web
+        window.onload = () => {
+            tambahPesan(`🤖 Selamat datang di Sub4Sub World!
+Silakan sapa atau tulis nama Anda di bawah ya 😊`, 'bot');
         };
     </script>
 </body>
