@@ -3,105 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penerima Tamu - Sub4Sub World</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+    <title>Sub4Sub World | theglenndrasmusic.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6a11cb',
+                        secondary: '#2575fc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
         }
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .chat-container {
-            width: 100%;
-            max-width: 500px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-            overflow: hidden;
-        }
-        .chat-header {
-            background: #6a11cb;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .chat-box {
-            height: 400px;
-            overflow-y: auto;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-        .message {
-            margin-bottom: 15px;
-            padding: 10px 15px;
-            border-radius: 12px;
-            max-width: 80%;
-            line-height: 1.4;
-        }
-        .bot {
-            background: #e9ecef;
-            color: #333;
-            margin-right: auto;
-        }
-        .user {
-            background: #2575fc;
-            color: white;
-            margin-left: auto;
-        }
-        .input-area {
-            display: flex;
-            padding: 15px;
-            gap: 10px;
-            background: white;
-            border-top: 1px solid #ddd;
-        }
-        #userInput {
-            flex: 1;
-            padding: 12px 15px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-        }
-        #sendBtn {
-            padding: 12px 20px;
-            background: #6a11cb;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        #sendBtn:hover {
-            background: #5a0fb8;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="chat-container">
-        <div class="chat-header">🤖 Penerima Tamu Sub4Sub World</div>
-        <div class="chat-box" id="chatBox"></div>
-        <div class="input-area">
-            <input type="text" id="userInput" placeholder="Tulis nama atau sapa disini...">
-            <button id="sendBtn">Kirim</button>
-        </div>
-    </div>
+<body class="bg-gradient-to-br from-primary to-secondary min-h-screen font-sans text-white">
 
+    <!-- Navbar -->
+    <nav class="bg-white/10 backdrop-blur-md border-b border-white/20 px-6 py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center gap-2">
+                <i class="fa fa-users"></i> Sub4Sub World
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="#beranda" class="hover:text-yellow-300 transition">Beranda</a>
+                <a href="#layanan" class="hover:text-yellow-300 transition">Layanan</a>
+                <a href="#tentang" class="hover:text-yellow-300 transition">Tentang</a>
+                <a href="#kontak" class="hover:text-yellow-300 transition">Kontak</a>
+            </div>
+            <button class="md:hidden text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 pt-28 pb-16">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-tight">
+                    Saling Bantu <span class="text-yellow-300">Kembangkan</span> Akun Kamu
+                </h1>
+                <p class="text-lg text-white/80">Grup komunitas saling follow, saling subscribe, saling like & komentar. Aman, gratis, dan aktif 24 jam!</p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#mulai" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Gabung Sekarang</a>
+                    <a href="#layanan" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">Pelajari Dulu</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://picsum.photos/id/3/600/400" alt="Ilustrasi Komunitas" class="rounded-2xl shadow-2xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur Sosmed -->
+    <section id="layanan" class="bg-white/10 backdrop-blur-md py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Layanan Sub4Sub</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-youtube-play text-red-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">YouTube</h3>
+                    <p class="text-sm text-white/80">Saling Subscribe & Nonton</p>
+                </div>
+                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-instagram text-pink-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">Instagram</h3>
+                    <p class="text-sm text-white/80">Saling Follow & Like</p>
+                </div>
+                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-tiktok text-black text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">TikTok</h3>
+                    <p class="text-sm text-white/80">Saling Follow & Suka</p>
+                </div>
+                <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-facebook-square text-blue-600 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg">Facebook</h3>
+                    <p class="text-sm text-white/80">Saling Berteman & Share</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAT BOT PENERIMA TAMU - TETAP ADA DI SINI -->
+    <section class="py-16 container mx-auto px-6">
+        <div class="max-w-lg mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-6">🤖 Penerima Tamu Sub4Sub World</h2>
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="bg-primary text-white py-3 px-4 text-center font-bold">
+                    Sub4Sub World - Pelayanan 24 Jam
+                </div>
+                <div id="chatBox" class="h-[400px] overflow-y-auto p-4 bg-gray-50 scrollbar-hide"></div>
+                <div class="flex gap-2 p-4 border-t">
+                    <input type="text" id="userInput" placeholder="Tulis nama atau sapa disini..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
+                    <button id="sendBtn" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold transition">Kirim</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 py-8 text-center text-white/70 text-sm">
+        <p>© 2026 Sub4Sub World | Dikelola oleh theglenndrasmusic.com</p>
+    </footer>
+
+    <!-- SCRIPT BOT PENERIMA TAMU YANG BENER -->
     <script>
         const chatBox = document.getElementById('chatBox');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
 
-        // Fungsi ambil hari, jam, tahun otomatis
+        // Ambil hari & jam otomatis
         function getWaktuLengkap() {
             const hariNama = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
             const sekarang = new Date();
@@ -112,57 +143,55 @@
             return { hari, jam, menit, tahun };
         }
 
-        // Tambah pesan ke layar
+        // Tampil pesan
         function tambahPesan(teks, tipe) {
             const div = document.createElement('div');
-            div.className = `message ${tipe}`;
+            div.className = `mb-3 p-3 rounded-xl max-w-[80%] ${tipe === 'bot' ? 'bg-gray-200 text-gray-800 mr-auto' : 'bg-secondary text-white ml-auto'}`;
             div.textContent = teks;
             chatBox.appendChild(div);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        // Jawaban bot khusus penerima tamu
+        // Logika Jawaban Bot
         function jawabBot(pesanUser) {
             const { hari, jam, menit, tahun } = getWaktuLengkap();
-            const nama = pesanUser.trim();
+            const teks = pesanUser.trim().toLowerCase();
 
-            // Kalau cuma sapa, minta nama
-            if (/halo|hai|assalamualaikum|selamat pagi|selamat siang|selamat sore|selamat malam/i.test(nama)) {
+            // Kalau sapa aja
+            if (/halo|hai|assalamualaikum|pagi|siang|sore|malam/i.test(teks)) {
                 return `👋 Halo! Selamat datang di Sub4Sub World 😊 Boleh saya tahu siapa nama Anda?`;
             }
 
-            // Kalau sudah sebut nama → kasih sambutan lengkap
-            if (nama.length > 1 && !/iya|tidak|makasih|terima kasih/i.test(nama)) {
-                return `✅ Selamat datang **${nama}**! Terima kasih sudah bergabung bersama kami 🎉
+            // Kalau sudah sebut nama
+            if (pesanUser.length > 1 && !/iya|tidak|makasih|tolong/i.test(teks)) {
+                const namaBener = pesanUser.trim();
+                return `✅ Selamat datang **${namaBener}**! Terima kasih sudah bergabung bersama kami 🎉
 🗓️ Hari : ${hari}
 ⏰ Jam : ${jam}:${menit} WIB
 📆 Tahun : ${tahun}
 
-Semoga betah dan sukses selalu ya di sini! 🙌`;
+Semoga betah, sukses, dan dapat banyak teman baru ya di sini! 🙌`;
             }
 
-            // Kalau tulisan gak jelas
-            return `🙏 Maaf, saya cuma penerima tamu. Silakan sebutkan nama Anda saja ya, nanti saya sapa lengkap sama waktunya 😊`;
+            // Kalau tulisan aneh
+            return `🙏 Maaf ya, saya cuma penerima tamu. Silakan sapa atau tulis nama Anda saja ya 😊`;
         }
 
-        // Kirim pesan saat klik tombol / tekan enter
+        // Proses kirim
         function prosesChat() {
             const teks = userInput.value.trim();
             if (!teks) return;
-
             tambahPesan(teks, 'user');
             userInput.value = '';
-
             setTimeout(() => {
-                const balasan = jawabBot(teks);
-                tambahPesan(balasan, 'bot');
-            }, 800);
+                tambahPesan(jawabBot(teks), 'bot');
+            }, 700);
         }
 
         sendBtn.addEventListener('click', prosesChat);
-        userInput.addEventListener('keypress', (e) => e.key === 'Enter' && prosesChat());
+        userInput.addEventListener('keypress', e => e.key === 'Enter' && prosesChat());
 
-        // Pesan pembuka pas buka web
+        // Pesan awal pas buka web
         window.onload = () => {
             tambahPesan(`🤖 Selamat datang di Sub4Sub World!
 Silakan sapa atau tulis nama Anda di bawah ya 😊`, 'bot');
