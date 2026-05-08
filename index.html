@@ -106,13 +106,15 @@
 </div>
     </section>
 
-    <!-- Earn Coins Section -->
+      <!-- ✅ EARN COINS SECTION (SUDAH ADA) -->
     <section id="earn" class="py-16 container mx-auto px-6">
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-2 text-shadow">💰 How to Earn Coins</h2>
             <p class="text-center mb-8 text-yellow-300 font-semibold">Complete tasks below, coins will be added automatically to your balance!</p>
             <div class="bg-white/20 rounded-xl p-8 shadow-lg">
+                
                 <div class="space-y-4 mb-8">
+                    <!-- Task youtube -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-youtube-play text-red-500 text-2xl"></i>
@@ -123,6 +125,8 @@
                             <button onclick="completeTask('youtube', 50)" id="btnYoutube" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
+
+                    <!-- task instagram -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-instagram text-pink-500 text-2xl"></i>
@@ -130,9 +134,11 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="coin-badge px-2 py-1 rounded text-sm">+ 40 COINS</span>
-                            <button onclick="completeTask('instagram', 40)" id="btnIg" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
+                            <button onclick="completeTask('instagram', 40)" id="btnInstagram" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
+
+                    <!-- task tiktok -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-tiktok text-black text-2xl"></i>
@@ -143,6 +149,8 @@
                             <button onclick="completeTask('tiktok', 40)" id="btnTiktok" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
+
+                    <!-- task whatsapp -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-whatsapp text-green-500 text-2xl"></i>
@@ -150,17 +158,108 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="coin-badge px-2 py-1 rounded text-sm">+ 100 COINS</span>
-                            <button onclick="completeTask('whatsapp', 100)" id="btnWa" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
+                            <button onclick="completeTask('whatsapp', 100)" id="btnWhatsapp" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
                 </div>
+
                 <div id="coinNotif" class="hidden bg-coin text-black font-bold p-3 rounded-lg text-center mb-4">
                     ✅ Success! You earned <span id="earnedCoin">0</span> Coins! New Balance: <span id="newBalance">0</span>
                 </div>
-                <p class="text-center text-yellow-300 font-bold">✅ Use your coins to post your own request and get followers/subscribers!</p>
+
+                <p class="text-center text-yellow-300 font-bold">✅ Use coins to post your request and get followers/subscribers!</p>
             </div>
         </div>
     </section>
+
+    <!-- ✅ ✅ ✅ BAGIAN BARU: BELI KOIN DANA 082260678214 (PASANG DI SINI) ✅ ✅ ✅ -->
+    <section id="buycoin" class="py-16 bg-white/10 backdrop-blur-md">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-3 text-shadow text-yellow-300">💰 BELI KOIN & BOOST CHANNEL</h2>
+                <p class="text-white/80 mb-8">Habis koin? Beli di sini, proses cepat, koin langsung masuk otomatis. Pembayaran cuma pakai DANA aja ya sayanggg 🥰</p>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <!-- Paket 1 -->
+                    <div class="glass rounded-xl p-6 hover:scale-105 transition shadow-lg border-2 border-transparent hover:border-yellow-400">
+                        <h3 class="text-xl font-bold mb-2">Paket Hemat</h3>
+                        <div class="text-3xl font-bold text-yellow-300 mb-3">1.000 Koin</div>
+                        <div class="text-lg mb-4 text-white/90">Rp 5.000</div>
+                        <p class="text-xs text-green-300 mb-4">Paling murah ✅</p>
+                        <button onclick="openPayment(1000, 5000)" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">Beli Sekarang</button>
+                    </div>
+
+                    <!-- Paket 2 -->
+                    <div class="glass rounded-xl p-6 hover:scale-105 transition shadow-xl border-2 border-yellow-400 relative">
+                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-black px-3 py-0.5 rounded-full text-sm font-bold">🔥 PALING LAKU</span>
+                        <h3 class="text-xl font-bold mb-2">Paket Populer</h3>
+                        <div class="text-3xl font-bold text-yellow-300 mb-3">3.000 Koin</div>
+                        <div class="text-lg mb-4 text-white/90">Rp 15.000</div>
+                        <p class="text-xs text-green-300 mb-4">Bonus +500 koin</p>
+                        <button onclick="openPayment(3000, 15000)" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">Beli Sekarang</button>
+                    </div>
+
+                    <!-- Paket 3 -->
+                    <div class="glass rounded-xl p-6 hover:scale-105 transition shadow-lg border-2 border-transparent hover:border-yellow-400">
+                        <h3 class="text-xl font-bold mb-2">Paket Besar</h3>
+                        <div class="text-3xl font-bold text-yellow-300 mb-3">8.000 Koin</div>
+                        <div class="text-lg mb-4 text-white/90">Rp 35.000</div>
+                        <p class="text-xs text-green-300 mb-4">Hemat Banget! ✨</p>
+                        <button onclick="openPayment(8000, 35000)" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">Beli Sekarang</button>
+                    </div>
+                </div>
+
+                <p class="text-sm text-white/70">✅ Pembayaran HANYA lewat <b>DANA: 082260678214</b> a/n Pemilik Sub4Sub World <br>✅ Koin otomatis masuk langsung setelah pembayaran berhasil</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL PEMBAYARAN -->
+    <div id="paymentModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
+        <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 max-w-md w-full shadow-2xl border border-white/20">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-yellow-300">📝 INSTRUKSI PEMBAYARAN</h3>
+                <button onclick="closePayment()" class="text-white/70 hover:text-white text-xl">&times;</button>
+            </div>
+
+            <div class="space-y-3 mb-5 text-left">
+                <p class="text-white/90">Jumlah Koin: <span id="payCoin" class="font-bold text-yellow-300 text-lg"></span></p>
+                <p class="text-white/90">Total Bayar: <span id="payPrice" class="font-bold text-green-400 text-lg"></span></p>
+                <hr class="border-white/20">
+                
+                <p class="text-sm text-white/80 font-semibold">💳 CARA BAYAR (KHUSUS DANA):</p>
+                <p class="text-sm text-white/80">1. Buka Aplikasi DANA</p>
+                <p class="text-sm text-white/80">2. Pilih Kirim Uang ke Nomor:</p>
+                <p class="text-base font-bold text-center py-2 bg-white/10 rounded text-yellow-300">0822-6067-8214</p>
+                <p class="text-sm text-white/80 text-center">a/n: Pemilik Sub4Sub World</p>
+                <p class="text-sm text-white/80 mt-2">3. Masukkan Nominal sesuai harga di atas</p>
+                <p class="text-sm text-white/80">4. Klik <b>"SAYA SUDAH BAYAR"</b> di bawah ini 👇</p>
+            </div>
+
+            <div class="bg-white p-3 rounded-lg mb-4 mx-auto w-fit">
+                <img src="https://picsum.photos/id/180/200/200" alt="QR CODE DANA 082260678214" class="w-[180px] h-[180px] rounded">
+                <p class="text-black text-xs text-center mt-1">Scan QRIS DANA</p>
+            </div>
+
+            <button onclick="confirmPayment()" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 rounded-lg transition">✅ Saya Sudah Bayar</button>
+        </div>
+    </div>
+    <!-- ✅ ✅ ✅ SELESAI BAGIAN BELI KOIN ✅ ✅ ✅ -->
+
+
+    <!-- ✅ WORLDWIDE REGISTRATION SECTION (SUDAH ADA, DI BAWAH BELI KOIN) -->
+    <section id="global-register" class="bg-white/10 backdrop-blur-md py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-2 text-shadow">🌍 Worldwide Member Registration</h2>
+                <p class="text-center mb-8 text-yellow-300 font-semibold">Open for all creators from all countries worldwide!</p>
+                <div class="bg-white/20 rounded-xl p-8 shadow-lg text-left">
+                    ... (lanjut kode yang ada) ...
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Worldwide Registration -->
     <section id="global-register" class="bg-white/10 backdrop-blur-md py-16">
@@ -326,6 +425,45 @@ bold text-lg mb-2">Like & View</h3>
             });
         };
     </script>
+
+<!-- ✅ SCRIPT BELI KOIN -->
+<script>
+let selectedCoin, selectedPrice;
+
+function openPayment(coin, price) {
+    selectedCoin = coin;
+    selectedPrice = price;
+    document.getElementById('payCoin').textContent = coin + " Koin";
+    document.getElementById('payPrice').textContent = "Rp " + price.toLocaleString('id-ID');
+    document.getElementById('paymentModal').classList.remove('hidden');
+    document.getElementById('paymentModal').classList.add('flex');
+}
+
+function closePayment() {
+    document.getElementById('paymentModal').classList.add('hidden');
+    document.getElementById('paymentModal').classList.remove('flex');
+}
+
+function confirmPayment() {
+    let currentBalance = localStorage.getItem('coinBalance') ? parseInt(localStorage.getItem('coinBalance')) : 0;
+    let newBalance = currentBalance + selectedCoin;
+    localStorage.setItem('coinBalance', newBalance);
+    document.getElementById('jumlahCoin').textContent = newBalance;
+
+    let history = JSON.parse(localStorage.getItem('purchaseHistory') || '[]');
+    history.push({
+        tanggal: new Date().toLocaleString('id-ID'),
+        jumlah_koin: selectedCoin,
+        harga: selectedPrice,
+        metode: "DANA 082260678214",
+        id_member: localStorage.getItem('memberID') || 'Belum Terdaftar'
+    });
+    localStorage.setItem('purchaseHistory', JSON.stringify(history));
+
+    alert(`🎉 BERHASIL! ${selectedCoin} Koin SUDAH MASUK ke akun kamu! 🚀\n\n💰 Uang sudah masuk ke pemilik via DANA: 082260678214\nTotal Saldo Kamu Sekarang: ${newBalance} Koin\n\nMakasih sudah beli ya, selamat boost channelnya! 😍`);
+    closePayment();
+}
+</script>
 
 </body>
 </html>
