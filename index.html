@@ -58,9 +58,8 @@
                 <a href="#home" class="hover:text-yellow-300 transition font-medium">Home</a>
                 <a href="#earn" class="hover:text-yellow-300 transition font-medium">Earn Coins</a>
                 <a href="#services" class="hover:text-yellow-300 transition font-medium">Services</a>
-                <!-- ✅ MENU PENDAFTARAN LUAR NEGERI (TETAP ADA) -->
                 <a href="#global-register" class="hover:text-yellow-300 transition font-medium font-bold">🌍 Worldwide Registration</a>
-                <!-- ✅ MENU LIVE CHAT DIARAHKAN KE UTAMA -->
+                <!-- ✅ REDIRECT KE UTAMA -->
                 <a href="https://theglenndrasmusic.com/#chat" target="_blank" class="hover:text-yellow-300 transition font-medium">Live Chat</a>
                 <a href="#privacy" class="hover:text-yellow-300 transition font-medium">Privacy Policy</a>
                 <a href="#terms" class="hover:text-yellow-300 transition font-medium">Terms</a>
@@ -84,7 +83,6 @@
                 <p class="text-lg text-white/90 leading-relaxed">Join thousands of creators from every country! Support each other, earn free coins, and use coins to boost your YouTube, Instagram, TikTok, and more. 100% safe, free, and unlimited growth.</p>
                 <div class="flex flex-wrap gap-4 pt-4">
                     <a href="#earn" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Start Earning Coins</a>
-                    <!-- ✅ TOMBOL PENDAFTARAN DAN CHAT -->
                     <a href="#global-register" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">🌍 Register Worldwide</a>
                     <a href="https://theglenndrasmusic.com/#chat" target="_blank" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">Go to Live Chat</a>
                 </div>
@@ -95,86 +93,63 @@
         </div>
     </section>
 
-    <!-- ✅ EARN COINS SECTION (ENGLISH ONLY) -->
+    <!-- Earn Coins Section -->
     <section id="earn" class="py-16 container mx-auto px-6">
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-2 text-shadow">💰 How to Earn Coins</h2>
             <p class="text-center mb-8 text-yellow-300 font-semibold">Complete tasks below, coins will be added automatically to your balance!</p>
             <div class="bg-white/20 rounded-xl p-8 shadow-lg">
-                
                 <div class="space-y-4 mb-8">
-                    <!-- Task 1 -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-youtube-play text-red-500 text-2xl"></i>
-                            <div>
-                                <p class="font-bold">Subscribe YouTube</p>
-                                <p class="text-sm text-white/80">@theglenndrasmusic</p>
-                            </div>
+                            <div><p class="font-bold">Subscribe YouTube</p><p class="text-sm text-white/80">@theglenndrasmusic</p></div>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="coin-badge px-2 py-1 rounded text-sm">+ 50 COINS</span>
                             <button onclick="completeTask('youtube', 50)" id="btnYoutube" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
-
-                    <!-- Task 2 -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-instagram text-pink-500 text-2xl"></i>
-                            <div>
-                                <p class="font-bold">Follow Instagram</p>
-                                <p class="text-sm text-white/80">@theglenndrasmusic</p>
-                            </div>
+                            <div><p class="font-bold">Follow Instagram</p><p class="text-sm text-white/80">@theglenndrasmusic</p></div>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="coin-badge px-2 py-1 rounded text-sm">+ 40 COINS</span>
                             <button onclick="completeTask('instagram', 40)" id="btnIg" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
-
-                    <!-- Task 3 -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-tiktok text-black text-2xl"></i>
-                            <div>
-                                <p class="font-bold">Follow TikTok</p>
-                                <p class="text-sm text-white/80">@theglenndrasmusic</p>
-                            </div>
+                            <div><p class="font-bold">Follow TikTok</p><p class="text-sm text-white/80">@theglenndrasmusic</p></div>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="coin-badge px-2 py-1 rounded text-sm">+ 40 COINS</span>
                             <button onclick="completeTask('tiktok', 40)" id="btnTiktok" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
-
-                    <!-- Task 4 -->
                     <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between shadow-sm">
                         <div class="flex items-center gap-3">
                             <i class="fa fa-whatsapp text-green-500 text-2xl"></i>
-                            <div>
-                                <p class="font-bold">Join Community Group</p>
-                                <p class="text-sm text-white/80">Get daily updates</p>
-                            </div>
+                            <div><p class="font-bold">Join Community Group</p><p class="text-sm text-white/80">Get daily updates</p></div>
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="coin-badge px-2 py-1 rounded text-sm">+ 100 COINS</span>
                             <button onclick="completeTask('whatsapp', 100)" id="btnWa" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded text-sm font-medium">Mark Done</button>
                         </div>
                     </div>
-
                 </div>
-
                 <div id="coinNotif" class="hidden bg-coin text-black font-bold p-3 rounded-lg text-center mb-4">
                     ✅ Success! You earned <span id="earnedCoin">0</span> Coins! New Balance: <span id="newBalance">0</span>
                 </div>
-
                 <p class="text-center text-yellow-300 font-bold">✅ Use your coins to post your own request and get followers/subscribers!</p>
             </div>
         </div>
     </section>
 
-    <!-- ✅ SECTION PENDAFTARAN LUAR NEGERI (LENGKAP & TAMPAK) -->
+    <!-- Worldwide Registration -->
     <section id="global-register" class="bg-white/10 backdrop-blur-md py-16">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto">
@@ -188,7 +163,6 @@
                         <li>Active social media account (YouTube / Instagram / TikTok)</li>
                         <li>Agree to community rules: No spam, safe & positive interaction only</li>
                     </ul>
-
                     <h3 class="font-bold text-xl mb-4">📝 How to Join (International Members)</h3>
                     <ol class="list-decimal list-inside space-y-2 mb-6 text-white/90">
                         <li>Complete all tasks in <strong>"Earn Coins"</strong> section above to get your balance</li>
@@ -197,7 +171,6 @@
                         <li>Type: <strong>REGISTER GLOBAL | [Your Full Name] | [Your Country]</strong></li>
                         <li>Wait for automatic confirmation, you will get your Global Member ID</li>
                     </ol>
-
                     <div class="text-center mt-8">
                         <a href="https://theglenndrasmusic.com/#chat" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl text-lg">
                             ➡️ Go to Registration Chat
@@ -208,7 +181,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section id="services" class="py-16 container mx-auto px-6">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12 text-shadow">🛒 Services & Coin Prices</h2>
@@ -226,12 +199,12 @@
                 <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
                     <i class="fa fa-tiktok text-black text-4xl mb-3"></i>
                     <h3 class="font-semibold text-lg mb-2">TikTok Follow</h3>
-                    <p class="text-sm text-white/80">Only <span class
-class="coin-badge px-2 rounded">25 Coins</span> / 1 Action</p>
+                    <p class="text-sm text-white/80">Only <span class="coin-badge px-2 rounded">25 Coins</span> / 1 Action</p>
                 </div>
                 <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
                     <i class="fa fa-heart text-red-400 text-4xl mb-3"></i>
-                    <h3 class="font-semibold text-lg mb-2">Like & View</h3>
+                    <h3 class="font-sem
+bold text-lg mb-2">Like & View</h3>
                     <p class="text-sm text-white/80">Only <span class="coin-badge px-2 rounded">15 Coins</span> / 1 Action</p>
                 </div>
             </div>
@@ -330,7 +303,7 @@ class="coin-badge px-2 rounded">25 Coins</span> / 1 Action</p>
         // Check task status on page load
         window.onload = () => {
             ['youtube', 'instagram', 'tiktok', 'whatsapp'].forEach(task => {
-                if (localStorage.getItem('task_' + task) === 'done') {
+                if (localStorage.getItem('task_' + taskName) === 'done') {
                     const btn = document.getElementById('btn' + task.charAt(0).toUpperCase() + task.slice(1));
                     btn.disabled = true;
                     btn.textContent = 'Claimed';
