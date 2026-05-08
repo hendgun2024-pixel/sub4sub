@@ -35,7 +35,6 @@
             }
         }
     </style>
-    <!-- IP Geolocation API -->
     <script src="https://cdn.jsdelivr.net/npm/ipapi.co@3.0.0/ipapi.min.js"></script>
 </head>
 <body class="bg-gradient-to-br from-primary to-secondary min-h-screen font-sans text-white">
@@ -48,9 +47,9 @@
             </a>
             <div class="hidden md:flex gap-8">
                 <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#rules" class="hover:text-yellow-300 transition">Rules</a>
                 <a href="#services" class="hover:text-yellow-300 transition">Services</a>
                 <a href="#about" class="hover:text-yellow-300 transition">About</a>
-                <!-- WhatsApp Group Tab -->
                 <a href="https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh" target="_blank" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded-lg transition flex items-center gap-1">
                     <i class="fa fa-whatsapp"></i> WA Group
                 </a>
@@ -70,7 +69,7 @@
                 </h1>
                 <p class="text-lg text-white/80">Global community to follow, subscribe, like & comment each other. Safe, free, and active 24/7!</p>
                 <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#join" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Join Now</a>
+                    <a href="#rules" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Read Rules First</a>
                     <a href="#services" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">Learn More</a>
                 </div>
             </div>
@@ -80,8 +79,35 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-white/10 backdrop-blur-md py-16">
+    <!-- RULES SECTION - SYARAT WAJIB FOLLOW -->
+    <section id="rules" class="bg-white/10 backdrop-blur-md py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">⚠️ MANDATORY RULES TO JOIN</h2>
+            <div class="max-w-2xl mx-auto bg-white/20 rounded-xl p-8 shadow-lg">
+                <p class="text-lg mb-6 text-center">To become a member & join our group, you <span class="text-yellow-300 font-bold">MUST FOLLOW / SUBSCRIBE</span> all 3 accounts below first:</p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between">
+                        <span class="font-semibold flex items-center gap-2"><i class="fa fa-youtube-play text-red-500"></i> YouTube: @theglenndrasmusic</span>
+                        <a href="https://youtube.com/@theglenndrasmusic" target="_blank" class="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-sm">Subscribe</a>
+                    </div>
+                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between">
+                        <span class="font-semibold flex items-center gap-2"><i class="fa fa-instagram text-pink-500"></i> Instagram: @theglenndrasmusic</span>
+                        <a href="https://instagram.com/theglenndrasmusic" target="_blank" class="bg-pink-500 hover:bg-pink-600 px-3 py-1 rounded text-sm">Follow</a>
+                    </div>
+                    <div class="bg-white/30 p-4 rounded-lg flex items-center justify-between">
+                        <span class="font-semibold flex items-center gap-2"><i class="fa fa-tiktok text-black"></i> TikTok: @theglenndrasmusic</span>
+                        <a href="https://tiktok.com/@theglenndrasmusic" target="_blank" class="bg-black/70 hover:bg-black px-3 py-1 rounded text-sm">Follow</a>
+                    </div>
+                </div>
+
+                <p class="text-center text-yellow-300 font-bold">✅ After following all 3, you can chat & join below ⬇️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-16">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -109,7 +135,7 @@
         </div>
     </section>
 
-    <!-- CHAT BOT - ENGLISH VERSION + COUNTRY DETECTION -->
+    <!-- CHAT BOT: ENGLISH + COUNTRY + RULES -->
     <section id="join" class="py-16 container mx-auto px-6">
         <div class="max-w-lg mx-auto">
             <h2 class="text-2xl font-bold text-center mb-6">🤖 Sub4Sub World Receptionist</h2>
@@ -119,7 +145,7 @@
                 </div>
                 <div id="chatBox" class="h-[400px] overflow-y-auto p-4 bg-gray-50 scrollbar-hide"></div>
                 <div class="flex gap-2 p-4 border-t">
-                    <input type="text" id="userInput" placeholder="Type your name or say hello..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
+                    <input type="text" id="userInput" placeholder="Type your name only (after following all accounts)" class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
                     <button id="sendBtn" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold transition">Send</button>
                 </div>
             </div>
@@ -131,32 +157,31 @@
         <p>© 2026 Sub4Sub World | Powered by theglenndrasmusic.com</p>
     </footer>
 
-    <!-- SCRIPT BOT: ENGLISH + AUTO COUNTRY -->
+    <!-- SCRIPT BOT: LENGKAP SEMUA FITUR -->
     <script>
         const chatBox = document.getElementById('chatBox');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
-        let userCountry = "Global"; // Default
+        let userCountry = "Global";
 
-        // Ambil info negara otomatis
+        // Detect Country
         ipapi.location(function(res) {
-            if(res && res.country_name) {
-                userCountry = res.country_name;
-            }
+            if(res && res.country_name) userCountry = res.country_name;
         });
 
-        // Ambil waktu lengkap
+        // Get Time
         function getFullTime() {
             const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             const now = new Date();
-            const day = dayNames[now.getDay()];
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const year = now.getFullYear();
-            return { day, hours, minutes, year };
+            return {
+                day: dayNames[now.getDay()],
+                hours: now.getHours().toString().padStart(2,'0'),
+                minutes: now.getMinutes().toString().padStart(2,'0'),
+                year: now.getFullYear()
+            };
         }
 
-        // Tampil pesan
+        // Add Message
         function addMessage(text, type) {
             const div = document.createElement('div');
             div.className = `mb-3 p-3 rounded-xl max-w-[80%] ${type === 'bot' ? 'bg-gray-200 text-gray-800 mr-auto' : 'bg-secondary text-white ml-auto'}`;
@@ -165,53 +190,65 @@
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        // Logika Jawaban Bot (English Only)
+        // Bot Reply LOGIC (SUDAH ADA SYARAT FOLLOW)
         function botReply(userText) {
             const { day, hours, minutes, year } = getFullTime();
             const text = userText.trim().toLowerCase();
 
-            // Kalau sapa
+            // Kalau sapa → ingatkan syarat
             if (/hello|hi|hey|good morning|good afternoon|good evening/i.test(text)) {
-                return `👋 Hello! Welcome to Sub4Sub World 😊 May I know your name, please?`;
+                return `👋 Hello! Welcome to Sub4Sub World 🌍
+
+⚠️ **IMPORTANT RULE FIRST**:
+You MUST FOLLOW / SUBSCRIBE all 3 accounts below before joining:
+✅ YouTube: @theglenndrasmusic
+✅ Instagram: @theglenndrasmusic
+✅ TikTok: @theglenndrasmusic
+
+After following all, please type your name only to continue 😊`;
             }
 
-            // Kalau sudah sebut nama → TAMPIL NEGARA OTOMATIS
+            // Kalau sudah ketik NAMA → BERES, TAMPILKAN SEMUA + LINK WA
             if (userText.length > 1 && !/yes|no|thanks|help/i.test(text)) {
                 const name = userText.trim();
-                return `✅ Welcome, **${name}**! 🎉
+                return `✅ **VERIFIED & WELCOMED!** 🎉
+
+👤 Name: ${name}
 📍 Country: ${userCountry}
 🗓️ Day: ${day}
 ⏰ Time: ${hours}:${minutes}
 📆 Year: ${year}
 
-Thank you for joining us! Hope you enjoy, grow your account, and make new friends from all over the world! 🌍🤝
+✅ You have followed all accounts → YOU ARE OFFICIALLY A MEMBER! 🎊
 
-👉 Join our WhatsApp Group: https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh`;
+👉 **Join our WhatsApp Group here**:
+https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh
+
+Enjoy our community, grow your account, and make friends worldwide! 🚀🌍`;
             }
 
             // Kalau tulisan lain
-            return `🙏 Sorry, I'm just a receptionist. Please just say hello or type your name only 😊`;
+            return `🙏 Sorry! Please follow all 3 accounts first, then type ONLY YOUR NAME to register 😊`;
         }
 
-        // Proses kirim pesan
+        // Process Chat
         function processChat() {
             const text = userInput.value.trim();
             if (!text) return;
             addMessage(text, 'user');
             userInput.value = '';
-            setTimeout(() => {
-                addMessage(botReply(text), 'bot');
-            }, 700);
+            setTimeout(() => addMessage(botReply(text), 'bot'), 700);
         }
 
         sendBtn.addEventListener('click', processChat);
         userInput.addEventListener('keypress', e => e.key === 'Enter' && processChat());
 
-        // Pesan awal
+        // Opening Message
         window.onload = () => {
             addMessage(`🤖 Welcome to **Sub4Sub World** 🌍
-Global Community for creators worldwide!
-Please say hello or type your name below 😊`, 'bot');
+Global Community for creators!
+
+⚠️ **REQUIREMENT**: Follow all 3 accounts @theglenndrasmusic first, then type your name to get group link 😊`, 'bot');
         };
     </script>
 </body>
