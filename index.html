@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +35,8 @@
             }
         }
     </style>
+    <!-- IP Geolocation API -->
+    <script src="https://cdn.jsdelivr.net/npm/ipapi.co@3.0.0/ipapi.min.js"></script>
 </head>
 <body class="bg-gradient-to-br from-primary to-secondary min-h-screen font-sans text-white">
 
@@ -45,10 +47,13 @@
                 <i class="fa fa-users"></i> Sub4Sub World
             </a>
             <div class="hidden md:flex gap-8">
-                <a href="#beranda" class="hover:text-yellow-300 transition">Beranda</a>
-                <a href="#layanan" class="hover:text-yellow-300 transition">Layanan</a>
-                <a href="#tentang" class="hover:text-yellow-300 transition">Tentang</a>
-                <a href="#kontak" class="hover:text-yellow-300 transition">Kontak</a>
+                <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                <a href="#services" class="hover:text-yellow-300 transition">Services</a>
+                <a href="#about" class="hover:text-yellow-300 transition">About</a>
+                <!-- WhatsApp Group Tab -->
+                <a href="https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh" target="_blank" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded-lg transition flex items-center gap-1">
+                    <i class="fa fa-whatsapp"></i> WA Group
+                </a>
             </div>
             <button class="md:hidden text-2xl">
                 <i class="fa fa-bars"></i>
@@ -57,65 +62,65 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="container mx-auto px-6 pt-28 pb-16">
+    <section id="home" class="container mx-auto px-6 pt-28 pb-16">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 space-y-6">
                 <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-tight">
-                    Saling Bantu <span class="text-yellow-300">Kembangkan</span> Akun Kamu
+                    Grow Your Account <span class="text-yellow-300">Together</span>
                 </h1>
-                <p class="text-lg text-white/80">Grup komunitas saling follow, saling subscribe, saling like & komentar. Aman, gratis, dan aktif 24 jam!</p>
+                <p class="text-lg text-white/80">Global community to follow, subscribe, like & comment each other. Safe, free, and active 24/7!</p>
                 <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#mulai" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Gabung Sekarang</a>
-                    <a href="#layanan" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">Pelajari Dulu</a>
+                    <a href="#join" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Join Now</a>
+                    <a href="#services" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">Learn More</a>
                 </div>
             </div>
             <div class="md:w-1/2">
-                <img src="https://picsum.photos/id/3/600/400" alt="Ilustrasi Komunitas" class="rounded-2xl shadow-2xl w-full h-auto">
+                <img src="https://picsum.photos/id/3/600/400" alt="Global Community" class="rounded-2xl shadow-2xl w-full h-auto">
             </div>
         </div>
     </section>
 
-    <!-- Fitur Sosmed -->
-    <section id="layanan" class="bg-white/10 backdrop-blur-md py-16">
+    <!-- Services Section -->
+    <section id="services" class="bg-white/10 backdrop-blur-md py-16">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">Layanan Sub4Sub</h2>
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
                     <i class="fa fa-youtube-play text-red-500 text-4xl mb-3"></i>
                     <h3 class="font-semibold text-lg">YouTube</h3>
-                    <p class="text-sm text-white/80">Saling Subscribe & Nonton</p>
+                    <p class="text-sm text-white/80">Subscribe & Watch Time</p>
                 </div>
                 <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
                     <i class="fa fa-instagram text-pink-500 text-4xl mb-3"></i>
                     <h3 class="font-semibold text-lg">Instagram</h3>
-                    <p class="text-sm text-white/80">Saling Follow & Like</p>
+                    <p class="text-sm text-white/80">Follow & Like</p>
                 </div>
                 <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
                     <i class="fa fa-tiktok text-black text-4xl mb-3"></i>
                     <h3 class="font-semibold text-lg">TikTok</h3>
-                    <p class="text-sm text-white/80">Saling Follow & Suka</p>
+                    <p class="text-sm text-white/80">Follow & Like</p>
                 </div>
                 <div class="bg-white/20 rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
                     <i class="fa fa-facebook-square text-blue-600 text-4xl mb-3"></i>
                     <h3 class="font-semibold text-lg">Facebook</h3>
-                    <p class="text-sm text-white/80">Saling Berteman & Share</p>
+                    <p class="text-sm text-white/80">Friend & Share</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CHAT BOT PENERIMA TAMU - TETAP ADA DI SINI -->
-    <section class="py-16 container mx-auto px-6">
+    <!-- CHAT BOT - ENGLISH VERSION + COUNTRY DETECTION -->
+    <section id="join" class="py-16 container mx-auto px-6">
         <div class="max-w-lg mx-auto">
-            <h2 class="text-2xl font-bold text-center mb-6">🤖 Penerima Tamu Sub4Sub World</h2>
+            <h2 class="text-2xl font-bold text-center mb-6">🤖 Sub4Sub World Receptionist</h2>
             <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
                 <div class="bg-primary text-white py-3 px-4 text-center font-bold">
-                    Sub4Sub World - Pelayanan 24 Jam
+                    Global Service • 24/7 Online
                 </div>
                 <div id="chatBox" class="h-[400px] overflow-y-auto p-4 bg-gray-50 scrollbar-hide"></div>
                 <div class="flex gap-2 p-4 border-t">
-                    <input type="text" id="userInput" placeholder="Tulis nama atau sapa disini..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
-                    <button id="sendBtn" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold transition">Kirim</button>
+                    <input type="text" id="userInput" placeholder="Type your name or say hello..." class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
+                    <button id="sendBtn" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold transition">Send</button>
                 </div>
             </div>
         </div>
@@ -123,78 +128,90 @@
 
     <!-- Footer -->
     <footer class="bg-black/20 py-8 text-center text-white/70 text-sm">
-        <p>© 2026 Sub4Sub World | Dikelola oleh theglenndrasmusic.com</p>
+        <p>© 2026 Sub4Sub World | Powered by theglenndrasmusic.com</p>
     </footer>
 
-    <!-- SCRIPT BOT PENERIMA TAMU YANG BENER -->
+    <!-- SCRIPT BOT: ENGLISH + AUTO COUNTRY -->
     <script>
         const chatBox = document.getElementById('chatBox');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
+        let userCountry = "Global"; // Default
 
-        // Ambil hari & jam otomatis
-        function getWaktuLengkap() {
-            const hariNama = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-            const sekarang = new Date();
-            const hari = hariNama[sekarang.getDay()];
-            const jam = sekarang.getHours().toString().padStart(2, '0');
-            const menit = sekarang.getMinutes().toString().padStart(2, '0');
-            const tahun = sekarang.getFullYear();
-            return { hari, jam, menit, tahun };
+        // Ambil info negara otomatis
+        ipapi.location(function(res) {
+            if(res && res.country_name) {
+                userCountry = res.country_name;
+            }
+        });
+
+        // Ambil waktu lengkap
+        function getFullTime() {
+            const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const now = new Date();
+            const day = dayNames[now.getDay()];
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const year = now.getFullYear();
+            return { day, hours, minutes, year };
         }
 
         // Tampil pesan
-        function tambahPesan(teks, tipe) {
+        function addMessage(text, type) {
             const div = document.createElement('div');
-            div.className = `mb-3 p-3 rounded-xl max-w-[80%] ${tipe === 'bot' ? 'bg-gray-200 text-gray-800 mr-auto' : 'bg-secondary text-white ml-auto'}`;
-            div.textContent = teks;
+            div.className = `mb-3 p-3 rounded-xl max-w-[80%] ${type === 'bot' ? 'bg-gray-200 text-gray-800 mr-auto' : 'bg-secondary text-white ml-auto'}`;
+            div.textContent = text;
             chatBox.appendChild(div);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
 
-        // Logika Jawaban Bot
-        function jawabBot(pesanUser) {
-            const { hari, jam, menit, tahun } = getWaktuLengkap();
-            const teks = pesanUser.trim().toLowerCase();
+        // Logika Jawaban Bot (English Only)
+        function botReply(userText) {
+            const { day, hours, minutes, year } = getFullTime();
+            const text = userText.trim().toLowerCase();
 
-            // Kalau sapa aja
-            if (/halo|hai|assalamualaikum|pagi|siang|sore|malam/i.test(teks)) {
-                return `👋 Halo! Selamat datang di Sub4Sub World 😊 Boleh saya tahu siapa nama Anda?`;
+            // Kalau sapa
+            if (/hello|hi|hey|good morning|good afternoon|good evening/i.test(text)) {
+                return `👋 Hello! Welcome to Sub4Sub World 😊 May I know your name, please?`;
             }
 
-            // Kalau sudah sebut nama
-            if (pesanUser.length > 1 && !/iya|tidak|makasih|tolong/i.test(teks)) {
-                const namaBener = pesanUser.trim();
-                return `✅ Selamat datang **${namaBener}**! Terima kasih sudah bergabung bersama kami 🎉
-🗓️ Hari : ${hari}
-⏰ Jam : ${jam}:${menit} WIB
-📆 Tahun : ${tahun}
+            // Kalau sudah sebut nama → TAMPIL NEGARA OTOMATIS
+            if (userText.length > 1 && !/yes|no|thanks|help/i.test(text)) {
+                const name = userText.trim();
+                return `✅ Welcome, **${name}**! 🎉
+📍 Country: ${userCountry}
+🗓️ Day: ${day}
+⏰ Time: ${hours}:${minutes}
+📆 Year: ${year}
 
-Semoga betah, sukses, dan dapat banyak teman baru ya di sini! 🙌`;
+Thank you for joining us! Hope you enjoy, grow your account, and make new friends from all over the world! 🌍🤝
+
+👉 Join our WhatsApp Group: https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh`;
             }
 
-            // Kalau tulisan aneh
-            return `🙏 Maaf ya, saya cuma penerima tamu. Silakan sapa atau tulis nama Anda saja ya 😊`;
+            // Kalau tulisan lain
+            return `🙏 Sorry, I'm just a receptionist. Please just say hello or type your name only 😊`;
         }
 
-        // Proses kirim
-        function prosesChat() {
-            const teks = userInput.value.trim();
-            if (!teks) return;
-            tambahPesan(teks, 'user');
+        // Proses kirim pesan
+        function processChat() {
+            const text = userInput.value.trim();
+            if (!text) return;
+            addMessage(text, 'user');
             userInput.value = '';
             setTimeout(() => {
-                tambahPesan(jawabBot(teks), 'bot');
+                addMessage(botReply(text), 'bot');
             }, 700);
         }
 
-        sendBtn.addEventListener('click', prosesChat);
-        userInput.addEventListener('keypress', e => e.key === 'Enter' && prosesChat());
+        sendBtn.addEventListener('click', processChat);
+        userInput.addEventListener('keypress', e => e.key === 'Enter' && processChat());
 
-        // Pesan awal pas buka web
+        // Pesan awal
         window.onload = () => {
-            tambahPesan(`🤖 Selamat datang di Sub4Sub World!
-Silakan sapa atau tulis nama Anda di bawah ya 😊`, 'bot');
+            addMessage(`🤖 Welcome to **Sub4Sub World** 🌍
+Global Community for creators worldwide!
+Please say hello or type your name below 😊`, 'bot');
         };
     </script>
 </body>
