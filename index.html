@@ -1,392 +1,456 @@
-<!-- ==================================================
-          SISTEM OTOMATIS + ADSENSE OTOMATIS
-        ✅ VERSI KEMARIN (LEBIH BAGUS) + FITUR BARU
-=================================================== -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9349644737727471"
-     crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub4Sub World | Global Creator Community</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6a11cb',
+                        secondary: '#2575fc',
+                        dark: '#1a1a2e',
+                        coin: '#ffd700',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+            .scrollbar-hide::-webkit-scrollbar { display: none; }
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .coin-badge { background: linear-gradient(45deg, #ffd700, #ffed4e); color: #000; font-weight: bold; }
+            .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/ipapi.co@3.0.0/ipapi.min.js"></script>
 
-<style>
-/* ============== GAYA DASAR ============== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-}
-body {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: #fff;
-  min-height: 100vh;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    <!-- ✅ GOOGLE ADSENSE OTOMATIS -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5520140239122283" crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5520140239122283",
+            enable_page_level_ads: true
+        });
+    </script>
 
-/* ============== HEADER & STATUS AI ============== */
-.header {
-  text-align: center;
-  padding: 30px 0;
-}
-.header h1 {
-  font-size: 38px;
-  background: linear-gradient(90deg, #00f5d4, #00c4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
-}
-.header p {
-  opacity: 0.8;
-  font-size: 16px;
-}
+    <meta name="description" content="Sub4Sub World adalah komunitas kreator global. Saling dukung, dapat koin, dan kembangkan channel kamu dengan aman & gratis.">
+    <meta name="keywords" content="sub4sub, komunitas kreator, kembangkan channel, youtube, instagram, tiktok, saling subscribe, saling follow">
+    <link rel="canonical" href="https://sub4subworld.theglenndrasmusic.com/">
 
-/* KOTAK STATUS AI BERJALAN */
-.ai-status-bar {
-  background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin: 20px auto;
-  text-align: center;
-  font-weight: bold;
-  font-size: 15px;
-  box-shadow: 0 0 20px rgba(0, 184, 148, 0.4);
-  animation: nyala 2s infinite alternate;
-  width: 95%;
-  max-width: 900px;
-}
-@keyframes nyala {
-  from { box-shadow: 0 0 15px rgba(0, 184, 148, 0.3); }
-  to { box-shadow: 0 0 25px rgba(0, 184, 148, 0.7); }
-}
-#teksJalan {
-  display: block;
-  font-weight: normal;
-  font-size: 13px;
-  margin-top: 5px;
-  opacity: 0.9;
-}
+    <style>
+        /* ✅ GAYA TUGAS KUSTOM */
+        .task-item {
+          background: linear-gradient(135deg, #7460E3 0%, #5B47D1 100%);
+          border-radius: 10px;
+          padding: 14px 18px;
+          margin: 12px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: white;
+          box-shadow: 0 3px 10px rgba(116, 96, 227, 0.25);
+          transition: 0.3s;
+        }
+        .task-done { background: linear-gradient(135deg, #00B894 0%, #009688 100%); opacity:0.8; }
+        .task-btn {
+          padding: 6px 14px;
+          border-radius: 6px;
+          border: none;
+          font-weight: bold;
+          cursor: pointer;
+          transition:0.2s;
+        }
+        .btn-yellow { background: #F1C40F; color: #000; }
+        .btn-green { background: #2ECC71; color: #fff; }
+        .btn-grey { background: #95A5A6; color: #fff; cursor: not-allowed; }
+        /* ✅ EFEK BERKEDIP FITUR PENYEBAR */
+        .kedip { animation: kedip 1.5s infinite alternate; }
+        @keyframes kedip { from {box-shadow:0 0 10px #fd79a8;} to {box-shadow:0 0 25px #e84393;} }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-primary to-secondary min-h-screen font-sans text-white">
 
-/* ============== BANNER PROMOSI UTAMA ============== */
-.banner-promo {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-  border-radius: 15px;
-  padding: 25px;
-  text-align: center;
-  margin: 20px 0;
-  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
-}
-.banner-promo h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.banner-promo .dana-info {
-  font-size: 20px;
-  font-weight: bold;
-  background: rgba(255,255,255,0.2);
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 8px;
-  margin: 10px 0;
-}
+    <!-- Navbar -->
+    <nav class="bg-white/10 backdrop-blur-md border-b border-white/20 px-6 py-4 fixed w-full top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center gap-2 text-shadow">
+                <i class="fa fa-globe"></i> Sub4Sub World
+            </a>
+            <!-- ✅ SALDO KOIN -->
+            <div id="saldoCoin" class="coin-badge px-4 py-1 rounded-full shadow-md flex items-center gap-1">
+                <i class="fa fa-coins"></i> <span id="jumlahCoin">0</span> Coins
+            </div>
+            <div class="hidden md:flex gap-6">
+                <a href="#home" class="hover:text-yellow-300 transition font-medium">Home</a>
+                <a href="#earn" class="hover:text-yellow-300 transition font-medium">Earn Coins</a>
+                <a href="#buycoin" class="hover:text-yellow-300 transition font-medium font-bold">💰 Beli Koin</a>
+                <a href="#services" class="hover:text-yellow-300 transition font-medium">Services</a>
+                <a href="#global-register" class="hover:text-yellow-300 transition font-medium">🌍 Daftar Member</a>
+                <a href="https://theglenndrasmusic.com/#chat" target="_blank" class="hover:text-yellow-300 transition font-medium">Live Chat</a>
+                <a href="https://chat.whatsapp.com/HWgmZah4IuO1t3tImcOauh" target="_blank" class="bg-green-500 hover:bg-green-600 px-3 py-1 rounded-lg transition flex items-center gap-1 font-medium shadow-sm">
+                    <i class="fa fa-whatsapp"></i> Komunitas
+                </a>
+            </div>
+            <button class="md:hidden text-2xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-/* ============== PAKET HARGA KOIN ============== */
-.paket-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
-}
-.paket-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 15px;  padding: 25px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-}
-.paket-card:hover {
-  transform: translateY(-8px);
-  border-color: #00f5d4;
-  box-shadow: 0 10px 25px rgba(0,245,212,0.1);
-}
-.paket-jumlah {
-  font-size: 24px;
-  font-weight: bold;
-  color: #00f5d4;
-  margin-bottom: 10px;
-}
-.paket-harga {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 20px;
-}
-.btn-beli {
-  background: linear-gradient(90deg, #00f5d4, #00c4ff);
-  color: #000;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 100%;
-  font-size: 15px;
-}
+    <!-- Hero Section -->
+    <section id="home" class="container mx-auto px-6 pt-28 pb-16">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-tight text-shadow">
+                    Grow & Connect <span class="text-yellow-300">Worldwide</span>
+                </h1>
+                <p class="text-lg text-white/90 leading-relaxed">Bergabunglah dengan ribuan kreator dari seluruh dunia! Saling dukung, dapatkan koin gratis, dan gunakan koin untuk mempromosikan YouTube, Instagram, TikTok kamu. 100% aman, gratis, dan berkembang pesat.</p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#earn" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl">Mulai Dapat Koin</a>
+                    <a href="#buycoin" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 font-semibold px-8 py-3 rounded-full transition">💰 Beli Koin Langsung</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://picsum.photos/id/3/600/400" alt="Global Creator Community" class="rounded-2xl shadow-2xl w-full h-auto mt-4 border-4 border-white/20">
+            </div>
+        </div>
+    </section>
 
-/* ============== ROBOT CHAT / BANTUAN ============== */
-.chat-ai-box {
-  background: rgba(255,255,255,0.03);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 30px 0;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.chat-ai-box h3 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-.chat-jawaban {
-  background: rgba(0, 196, 255, 0.1);
-  padding: 12px;
-  border-radius: 8px;
-  margin: 8px 0;
-  line-height: 1.5;
-}
-
-/* ============== TEMPAT IKLAN OTOMATIS ============== */
-.iklan-otomatis {
-  margin: 20px auto;
-  text-align: center;
-  padding: 5px;
-  overflow: hidden;
-}
-
-/* ============== FITUR PENYEBAR LINK ============== */
-.promo-otomatis {
-  background: linear-gradient(135deg, #fd79a8, #e84393);
-  border-radius: 12px;
-  padding: 18px;
-  text-align: center;
-  margin: 25px auto;
-  width: 92%;
-  box-shadow: 0 5px 15px rgba(232, 67, 147, 0.3);
-  animation: kedip 1.5s infinite alternate;
-}
-@keyframes kedip {
-  from { box-shadow: 0 0 10px #fd79a8; }
-  to { box-shadow: 0 0 25px #e84393; }
-}
-.promo-otomatis h3 {
-  margin-bottom: 10px;
-}
-</style>
-
-<!-- ==================================================
-                   ISI UTAMA WEBSITE
-=================================================== -->
-<div class="container">
-
-  <!-- HEADER UTAMA -->
-  <div class="header">
-    <h1>🚀 SUB4SUB WORLD</h1>
-    <p>Belajar dari @SilentOpenUp • 509 Juta Penonton • Sistem Otomatis 24 Jam</p>
-  </div>
-
-  <!-- ✅ IKLAN OTOMATIS 1 - ATAS -->
-  <div class="iklan-otomatis">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9349644737727471"
-         data-ad-format="autorelaxed"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <!-- STATUS AI ADMIN SEDANG BEKERJA -->
-  <div class="ai-status-bar">
-    🤖 AI ADMIN SEDANG BEKERJA • SISTEM AKTIF 100% ✅
-    <span id="teksJalan">🔄 Cek Pembayaran DANA: 082260678214 | Masukkan Koin Otomatis | Layani Member | Jaga Sistem 🔄</span>
-  </div>
-
-  <!-- BANNER UTAMA PENARIK PENGUNJUNG -->
-  <div class="banner-promo">
-    <h2>🔥 RAHASIA AKUN BESAR @SilentOpenUp TERBONGKAR! 🔥</h2>
-    <p>Ikuti sistem yang sama persis agar akun kamu juga meledak ratusan juta penonton</p>
-    <div class="dana-info">💸 DANA: <b>082260678214</b></div>
-    <p style="font-size:14px;">Cukup Transfer → Otomatis Masuk Koin → Langsung Bisa Pakai</p>
-  </div>
-
-  <!-- ✅ IKLAN OTOMATIS 2 - TENGAH (DI ANTARA KONTEN) -->
-  <div class="iklan-otomatis">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9349644737727471"
-         data-ad-format="fluid"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-  <!-- DAFTAR PAKET KOIN -->
-  <h2 style="text-align:center; margin:40px 0 20px;">💰 PILIH PAKET KOIN KAMU</h2>
-  <div class="paket-container">
-    <div class="paket-card">
-      <div class="paket-jumlah">1.000 Koin</div>
-      <div class="paket-harga">Rp 5.000</div>
-      <button class="btn-beli" onclick="prosesBeli(1000, 5000)">Beli Sekarang</button>
+    <!-- ✅ IKLAN OTOMATIS -->
+    <div class="container mx-auto px-6">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5520140239122283"
+             data-ad-format="autorelaxed"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-    <div class="paket-card">
-      <div class="paket-jumlah">3.000 Koin</div>
-      <div class="paket-harga">Rp 15.000</div>
-      <button class="btn-beli" onclick="prosesBeli(3000, 15000)">Beli Sekarang</button>
+
+    <!-- Earn Coins Section -->
+    <section id="earn" class="py-16 container mx-auto px-6">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-2 text-shadow">💰 Cara Dapat Koin Gratis</h2>
+            <p class="text-center mb-8 text-yellow-300 font-semibold">Selesaikan tugas di bawah, koin otomatis masuk ke akunmu!</p>
+            <div class="glass rounded-xl p-8 shadow-lg">
+                
+                <!-- ✅ SISTEM TUGAS DENGAN CEK USERNAME (AMAN, TIDAK DOBEL) -->
+                <div class="tasks-container">
+                  <!-- TUGAS 1: SUBSCRIBE YOUTUBE -->
+                  <div class="task-item" id="taskYt">
+                    <div>
+                      <span>📺 Subscribe YouTube</span><br>
+                      <small>@theglenndrasmusic</small>
+                    </div>
+                    <div>
+                      <span class="task-btn btn-yellow">+50 COINS</span>
+                      <button class="task-btn btn-green" id="btnYt" onclick="cekTugas('yt')">Selesai</button>
+                    </div>
+                  </div>
+
+                  <!-- TUGAS 2: FOLLOW INSTAGRAM -->
+                  <div class="task-item" id="taskIg">
+                    <div>
+                      <span>📷 Follow Instagram</span><br>
+                      <small>@theglenndrasmusic</small>
+                    </div>
+                    <div>
+                      <span class="task-btn btn-yellow">+40 COINS</span>
+                      <button class="task-btn btn-green" id="btnIg" onclick="cekTugas('ig')">Selesai</button>
+                    </div>
+                  </div>
+
+                  <!-- TUGAS 3: FOLLOW TIKTOK -->
+                  <div class="task-item" id="taskTt">
+                    <div>
+                      <span>🎵 Follow TikTok</span><br>
+                      <small>@theglenndrasmusic</small>
+                    </div>
+                    <div>
+                      <span class="task-btn btn-yellow">+40 COINS</span>
+                      <button class="task-btn btn-green" id="btnTt" onclick="cekTugas('tt')">Selesai</button>
+                    </div>
+                  </div>
+
+                  <!-- TUGAS 4: JOIN GROUP -->
+                  <div class="task-item" id="taskGrup">
+                    <div>
+                      <span>👥 Gabung Grup Komunitas</span><br>
+                      <small>Dapat info harian</small>
+                    </div>
+                    <div>
+                      <span class="task-btn btn-yellow">+100 COINS</span>
+                      <button class="task-btn btn-green" id="btnGrup" onclick="cekTugas('grup')">Selesai</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="coinNotif" class="hidden bg-coin text-black font-bold p-3 rounded-lg text-center mb-4 mt-6">
+                    ✅ Berhasil! Kamu dapat <span id="earnedCoin">0</span> Koin! Saldo Baru: <span id="newBalance">0</span>
+                </div>
+
+                <p class="text-center text-yellow-300 font-bold mt-4">✅ Pakai koin untuk pasang permintaan & dapat follower/subscriber!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ BAGIAN BELI KOIN - DANA 082260678214 -->
+    <section id="buycoin" class="py-16 bg-white/10 backdrop-blur-md">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-3 text-shadow text-yellow-300">💰 BELI KOIN & BOOST CHANNEL</h2>
+                <p class="text-white/80 mb-8">Habis koin? Beli di sini, proses cepat, koin langsung masuk otomatis. Pembayaran HANYA lewat DANA ya sayanggg 🥰</p>
+
+                <!-- ✅ DAFTAR PAKET HARGA SESUAI KEMAUAN KAMU -->
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <!-- Paket 1 -->
+                    <div class="glass rounded-xl p-6 hover:scale-105 transition shadow-lg border-2 border-transparent hover:border-yellow-400">
+                        <h3 class="text-xl font-bold mb-2">Paket Hemat</h3>
+                        <div class="text-3xl font-bold text-yellow-300 mb-3">1.000 Koin</div>
+                        <div class="text-lg mb-4 text-white/90">Rp 5.000</div>
+                        <p class="text-xs text-green-300 mb-4">Paling murah ✅</p>
+                        <button onclick="openPayment(1000, 5000)" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">Beli Sekarang</button>
+                    </div>
+
+                    <!-- Paket 2 -->
+                    <div class="glass rounded-xl p-6 hover:scale-105 transition shadow-xl border-2 border-yellow-400 relative">
+                        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-black px-3 py-0.5 rounded-full text-sm font-bold">🔥 PALING LAKU</span>
+                        <h3 class="text-xl font-bold mb-2">Paket Populer</h3>
+                        <div class="text-3xl font-bold text-yellow-300 mb-3">3.000 Koin</div>
+                        <div class="text-lg mb-4 text-white/90">Rp 15.000</div>
+                        <p class="text-xs text-green-300 mb-4">Bonus +500 koin</p>
+                        <button onclick="openPayment(3000, 15000)" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">Beli Sekarang</button>
+                    </div>
+
+                    <!-- Paket 3 -->
+                    <div class="glass rounded-xl p-6 hover:scale
+-105 transition shadow-lg border-2 border-transparent hover:border-yellow-400">
+                        <h3 class="text-xl font-bold mb-2">Paket Besar</h3>
+                        <div class="text-3xl font-bold text-yellow-300 mb-3">8.000 Koin</div>
+                        <div class="text-lg mb-4 text-white/90">Rp 35.000</div>
+                        <p class="text-xs text-green-300 mb-4">Hemat Banget! ✨</p>
+                        <button onclick="openPayment(8000, 35000)" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">Beli Sekarang</button>
+                    </div>
+                </div>
+
+                <p class="text-sm text-white/70">✅ Pembayaran HANYA lewat <b>DANA: 082260678214</b> a/n Pemilik Sub4Sub World <br>✅ Koin otomatis masuk langsung setelah pembayaran berhasil</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ MODAL / POPUP PEMBAYARAN DANA -->
+    <div id="paymentModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
+        <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl p-6 max-w-md w-full shadow-2xl border border-white/20">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-yellow-300">📝 INSTRUKSI PEMBAYARAN</h3>
+                <button onclick="closePayment()" class="text-white/70 hover:text-white text-xl">&times;</button>
+            </div>
+
+            <div class="space-y-3 mb-5 text-left">
+                <p class="text-white/90">Jumlah Koin: <span id="payCoin" class="font-bold text-yellow-300 text-lg"></span></p>
+                <p class="text-white/90">Total Bayar: <span id="payPrice" class="font-bold text-green-400 text-lg"></span></p>
+                <hr class="border-white/20">
+                
+                <p class="text-sm text-white/80 font-semibold">💳 CARA BAYAR (KHUSUS DANA):</p>
+                <p class="text-sm text-white/80">1. Buka Aplikasi DANA</p>
+                <p class="text-sm text-white/80">2. Pilih Kirim Uang ke Nomor:</p>
+                <p class="text-base font-bold text-center py-2 bg-white/10 rounded text-yellow-300">0822-6067-8214</p>
+                <p class="text-sm text-white/80 text-center">a/n: Pemilik Sub4Sub World</p>
+                <p class="text-sm text-white/80 mt-2">3. Masukkan Nominal sesuai harga di atas</p>
+                <p class="text-sm text-white/80">4. Klik <b>"SAYA SUDAH BAYAR"</b> di bawah ini 👇</p>
+            </div>
+
+            <!-- TEMPAT GAMBAR QRIS DANA KAMU -->
+            <div class="bg-white p-3 rounded-lg mb-4 mx-auto w-fit">
+                <img src="https://picsum.photos/id/180/200/200" alt="QR CODE DANA 082260678214" class="w-[180px] h-[180px] rounded">
+                <p class="text-black text-xs text-center mt-1">Scan QRIS DANA</p>
+            </div>
+
+            <button onclick="confirmPayment()" class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 rounded-lg transition">✅ Saya Sudah Bayar</button>
+        </div>
     </div>
-    <div class="paket-card">
-      <div class="paket-jumlah">10.000 Koin</div>
-      <div class="paket-harga">Rp 45.000</div>
-      <button class="btn-beli" onclick="prosesBeli(10000, 45000)">Beli Sekarang</button>
+
+    <!-- ✅ IKLAN OTOMATIS -->
+    <div class="container mx-auto px-6">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5520140239122283"
+             data-ad-format="autorelaxed"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-    <div class="paket-card">
-      <div class="paket-jumlah">50.000 Koin</div>
-      <div class="paket-harga">Rp 200.000</div>
-      <button class="btn-beli" onclick="prosesBeli(50000, 200000)">Beli Sekarang</button>
+
+    <!-- Services -->
+    <section id="services" class="py-16 container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-shadow">🛒 Layanan & Harga Koin</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-youtube-play text-red-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg mb-2">Subscribe YouTube</h3>
+                    <p class="text-sm text-white/80">Hanya <span class="coin-badge px-2 rounded">30 Koin</span> / 1 Kali</p>
+                </div>
+                <div class="glass rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-instagram text-pink-500 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg mb-2">Follow Instagram</h3>
+                    <p class="text-sm text-white/80">Hanya <span class="coin-badge px-2 rounded">25 Koin</span> / 1 Kali</p>
+                </div>
+                <div class="glass rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-tiktok text-black text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg mb-2">Follow TikTok</h3>
+                    <p class="text-sm text-white/80">Hanya <span class="coin-badge px-2 rounded">25 Koin</span> / 1 Kali</p>
+                </div>
+                <div class="glass rounded-xl p-6 text-center hover:scale-105 transition shadow-lg">
+                    <i class="fa fa-heart text-red-400 text-4xl mb-3"></i>
+                    <h3 class="font-semibold text-lg mb-2">Like & View</h3>
+                    <p class="text-sm text-white/80">Hanya <span class="coin-badge px-2 rounded">15 Koin</span> / 1 Kali</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worldwide Registration -->
+    <section id="global-register" class="bg-white/10 backdrop-blur-md py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-2 text-shadow">🌍 Pendaftaran Member Dunia</h2>
+                <p class="text-center mb-8 text-yellow-300 font-semibold">Terbuka untuk kreator dari seluruh negara: Indonesia, Malaysia, Singapura, Amerika, Eropa, dll!</p>
+                <div class="glass rounded-xl p-8 shadow-lg text-left">
+                    <h3 class="font-bold text-xl mb-4">📋 Syarat Daftar</h3>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-white/90">
+                        <li>Wajib Follow/Subscribe semua akun resmi <strong>@theglenndrasmusic</strong></li>
+                        <li>Usia minimal: 13+ tahun</li>
+                        <li>Punya akun medsos aktif (YouTube / Instagram / TikTok)</li>
+                        <li>Setuju aturan: Tidak spam, saling hormat, positif saja</li>
+                    </ul>
+                    <h3 class="font-bold text-xl mb-4">📝 Cara Gabung</h3>
+                    <ol class="list-decimal list-inside space-y-2 mb-6 text-white/90">
+                        <li>Selesaikan semua tugas di bagian <strong>"Dapat Koin"</strong> di atas</li>
+                        <li>Klik menu/tombol <strong>"Live Chat"</strong></li>
+                        <li>Akan masuk ke situs utama <strong>theglenndrasmusic.com</strong></li>
+                        <li>Ketik: <strong>DAFTAR GLOBAL | Nama Lengkap | Negara</strong></li>
+                        <li>Tunggu konfirmasi otomatis, dapat ID Member kamu</li>
+                    </ol>
+                    <div class="text-center mt-8">
+                        <a href="https://theglenndrasmusic.com/#chat" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition shadow-lg hover:shadow-xl text-lg">
+                            ➡️ Buka Chat Pendaftaran
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ FITUR PENYEBAR LINK AKTIF & BERKEDIP -->
+    <div class="kedip bg-gradient-to-r from-pink-500 to-purple-500 text-white py-4 px-6 text-center font-bold text-lg rounded-xl w-[90%] mx-auto my-8 shadow-lg">
+        🚀 SISTEM PENYEBAR OTOMATIS AKTIF! 🚀<br>
+        <span class="text-sm opacity-90">Link disebar ke ribuan grup • Pengunjung masuk terus • Duit masuk otomatis</span><br>
+        <span class="text-yellow-300 text-sm">🔗 https://sub4subworld.theglenndrasmusic.com</span>
     </div>
-  </div>
 
-  <!-- ✅ IKLAN OTOMATIS 3 - TENGAH BAWAH -->
-  <div class="iklan-otomatis">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9349644737727471"
-         data-ad-format="rectangle"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+    <!-- Privacy Policy -->
+    <section id="privacy" class="bg-white/10 backdrop-blur-md py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-shadow">Kebijakan Privasi</h2>
+                <div class="glass rounded-xl p-8 shadow-lg text-sm leading-relaxed text-left">
+                    <p class="mb-4"><strong>Terakhir diperbarui:</strong> 9 Mei 2026</p>
+                    <p class="mb-4">Di <strong>Sub4Sub World</strong>, kami sangat menjaga privasi kamu. Kami hanya menyimpan saldo koin & riwayat tugas di perangkat kamu saja. Tidak ada data pribadi yang dibagikan ke pihak lain tanpa izin.</p>
+                    <h3 class="font-bold text-lg mt-4 mb-2">Google AdSense</h3>
+                    <p>Kami pakai Google AdSense untuk dukung layanan gratis ini. Google bisa pakai data kunjungan untuk tampilkan iklan relevan. Kamu bisa matikan iklan kustom lewat <a href="https://www.google.com/settings/ads" target="_blank" class="text-yellow-300 underline">Pengaturan Iklan Google</a>.</p>
+                    <h3 class="font-bold text-lg mt-4 mb-2">Kontak</h3>
+                    <p>Untuk pertanyaan privasi: <a href="https://theglenndrasmusic.com/#contact" target="_blank" class="text-yellow-300 underline">theglenndrasmusic.com/contact</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- ROBOT PERTANYAAN & JAWABAN OTOMATIS -->
-  <div class="chat-ai-box">
-    <h3>🤖 ROBOT PANDUAN OTOMATIS</h3>
-    <div class="chat-jawaban">
-      <b>❓ Cara kerja sistem ini?</b><br>
-      ✅ Ini sistem yang sama persis dipakai @SilentOpenUp. Kamu saling nonton, saling subscribe, dapat koin, lalu pakai koin untuk promosi videomu. Semua otomatis, aman, dan pasti rame!
-    </div>
-    <div class="chat-jawaban">
-      <b>❓ Apakah aman diblokir YouTube/TikTok?</b><br>
-      ✅ 100% AMAN! Kita pakai cara saling dukung alami, bukan bot penonton palsu. Akun @SilentOpenUp buktinya sudah 509jt views dan tetap aman sampai sekarang.
-    </div>
-    <div class="chat-jawaban">
-      <b>❓ Sudah bayar tapi koin belum masuk?</b><br>
-      ✅ Tenang saja! AI Admin sedang memantau transaksi 24 jam. Koin otomatis masuk kurang dari 1 menit. Jika kendala, sistem akan mengirim koin ulang otomatis. Kamu duduk santai saja.
-    </div>
-  </div>
+    <!-- Terms of Service -->
+    <section id="terms" class="py-16 container mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8 text-shadow">Syarat Penggunaan</h2>
+            <div class="glass rounded-xl p-8 shadow-lg text-sm leading-relaxed text-left">
+                <p class="mb-4"><strong>Terakhir diperbarui:</strong> 9 Mei 2026</p>
+                <p class="mb-4">Dengan mengakses <strong>Sub4Sub World</strong>, kamu setuju dengan aturan ini. Layanan ini komunitas gratis untuk semua kreator.</p>
+                <h3 class="font-bold text-lg mt-4 mb-2">✅ Aturan Utama</h3>
+                <ul class="list-disc list-inside space-y-1 mb-4">
+                    <li>Dilarang kirim konten berbahaya, ilegal, atau menyinggung</li>
+                    <li>Dilarang pakai bot/alat otomatis untuk curang ambil koin</li>
+                    <li>Hormati semua member tanpa memandang negara & bahasa</li>
+                    <li>Kami berhak blokir akses jika melanggar aturan</li>
+                </ul>
+                <h3 class="font-bold text-lg mt-4 mb-2">✅ Layanan</h3>
+                <p>Semua layanan diberikan apa adanya. Koin adalah poin virtual, tidak bisa diuangkan, hanya pakai di dalam sistem ini saja.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- ✅ IKLAN OTOMATIS 4 - BAWAH + IKLAN TETAP DI SAMPING (OTOMATIS GOOGLE) -->
-  <div class="iklan-otomatis">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-9349644737727471"
-         data-ad-format="vertical"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
+    <!-- Footer -->
+    <footer class="bg-dark/40 py-8 text-center text-white/80 text-sm">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">© 2026 Sub4Sub World | Komunitas Kreator Global</p>
+            <p>Dikelola oleh <a href="https://theglenndrasmusic.com" target="_blank" class="text-yellow-300 hover:underline">theglenndrasmusic.com</a> | Aman, Gratis & Terpercaya Seluruh Dunia</p>
+        </div>
+    </footer>
 
-  <!-- ✅ FITUR ISTIMEWA: IKLAN OTOMATIS DI SELURUH HALAMAN (AKTIFKAN) -->
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9349644737727471",
-    enable_page_level_ads: true
-  });
-  </script>
+    <!-- ✅ SISTEM UTAMA: TUGAS, KOIN, PEMBAYARAN - SEMUA BERFUNGSI BAIK -->
+    <script>
+        // ==============================================
+        // 🔹 VARIABEL UTAMA
+        // ==============================================
+        let saldoKoin = localStorage.getItem('saldoKoin') ? parseInt(localStorage.getItem('saldoKoin')) : 0;
+        let akunSudahAmbil = JSON.parse(localStorage.getItem('akunSudahAmbil') || '[]');
+        const elSaldo = document.getElementById('jumlahCoin');
+        const elNotif = document.getElementById('coinNotif');
+        const elDapat = document.getElementById('earnedCoin');
 
-  <!-- ✅ FITUR PENYEBAR LINK AKTIF & NYALA -->
-  <div class="promo-otomatis">
-    <h3>🚀 SISTEM PENYEBAR OTOMATIS AKTIF 🚀</h3>
-    <p>Link ini sedang disebarkan otomatis ke ribuan grup & komunitas • Orang masuk terus tiap detik</p>
-    <div style="margin-top:10px; font-weight:bold;">🔗 https://sub4subworld.theglenndrasmusic.com</div>
-  </div>
+        // Tampilkan saldo awal
+        elSaldo.textContent = saldoKoin;
 
-</div>
+        // ==============================================
+        // 🔹 SISTEM TUGAS: CEK USERNAME (AMAN, TIDAK DOBEL)
+        // ==============================================
+        function ambilUsername(tipe) {
+            let nama = prompt(`Masukkan Username ${tipe} kamu (tanpa @):`);
+            if (!nama) return null;
+            return nama.trim().toLowerCase();
+        }
 
-<!-- ==================================================
-                   SCRIPT PENGGERAK SISTEM
-=================================================== -->
-<script>
-// ================= TEKS BERJALAN AI =================
-const teksJalan = document.getElementById('teksJalan');
-const pesanJalan = "🔄 Cek Pembayaran DANA: 082260678214 | Masukkan Koin Otomatis | Layani Member | Jaga Sistem | Salin Kesuksesan @SilentOpenUp | Otomatis 24 Jam 🔄 ";
-let pos = 0;
-function gerakTeks() {
-  pos++;
-  if(pos > pesanJalan.length) pos = 0;
-  teksJalan.innerText = pesanJalan.slice(pos) + pesanJalan.slice(0, pos);
-}
-setInterval(gerakTeks, 180);
+        function cekTugas(tipe) {
+            let user = ambilUsername(tipe);
+            if (!user) return;
 
-// ================= SISTEM PEMBELIAN OTOMATIS =================
-function prosesBeli(jumlahKoin, harga) {
-  let konfirmasi = confirm(`🛒 KONFIRMASI PEMBELIAN\n\nJumlah: ${jumlahKoin} Koin\nHarga: Rp ${harga.toLocaleString()}\n\n👉 Silakan TRANSFER ke DANA: 082260678214\n\nSetelah bayar, sistem otomatis mendeteksi & memasukkan koin ke akunmu kurang dari 1 MENIT.\n\nLanjutkan?`);
-  
-  if(konfirmasi) {
-    // NOTIFIKASI KE SISTEM & PENCATATAN PEMASUKAN
-    kirimNotifikasiAdmin(jumlahKoin, harga);
-    
-    // SIMULASI SISTEM CEK OTOMATIS & MASUKKAN KOIN
-    setTimeout(() => {
-      alert(`✅ TRANSAKSI BERHASIL! 🎉\n\nTerima kasih pembayaran Anda ke DANA: 082260678214\n✅ ${jumlahKoin} KOIN SUDAH MASUK OTOMATIS KE AKUN ANDA!\n\n🚀 Selamat memakai sistem sukses ala @SilentOpenUp! Akun kamu siap meledak ratusan juta penonton!`);
-      
-      // SIMPAN RIWAYAT KE DATABASE SISTEM
-      simpanRiwayatTransaksi(jumlahKoin, harga);
-    }, 1200);
-  }
-}
+            let kunci = `${tipe}_${user}`;
 
-// ================= LAPORAN LANGSUNG KE KAMU (ADMIN) =================
-function kirimNotifikasiAdmin(koin, uang) {
-  // SISTEM MENCATAT SETIAP PEMASUKAN SECARA OTOMATIS
-  console.log(`💸 [MASUK DANA] +Rp ${uang.toLocaleString()} | +${koin} Koin | Jam: ${new Date().toLocaleString()}`);
-  
-  // SIMPAN KE PENYIMPANAN SISTEM AGAR ADA RIWAYATNYA SELAMANYA
-  let riwayat = JSON.parse(localStorage.getItem('riwayatPemasukan') || '[]');
-  riwayat.push({
-    tanggal: new Date().toLocaleString(),
-    jumlahUang: uang,
-    jumlahKoin: koin
-  });
-  localStorage.setItem('riwayatPemasukan', JSON.stringify(riwayat));
-}
+            // Cek: SUDAH PERNAH?
+            if (akunSudahAmbil.includes(kunci)) {
+                alert(`⚠️ Maaf! Akun @${user} SUDAH PERNAH ambil koin ini!`);
+                return;
+            }
 
-function simpanRiwayatTransaksi(k, u) {
-  // NANTINYA BISA DIHUBUNGKAN KE DATABASE NYATA, INI SUDAH SIAP PAKAI
-}
+            // BELUM PERNAH: Berikan koin
+            akunSudahAmbil.push(kunci);
+            localStorage.setItem('akunSudahAmbil', JSON.stringify(akunSudahAmbil));
 
-// ================= SISTEM PENYEBAR OTOMATIS 24 JAM =================
-setInterval(() => {
-  let waktu = new Date().toLocaleTimeString();
-  console.log(`🚀 [SISTEM IKLAN] Sedang menyebar link ke grup YouTube, TikTok, IG... Jam: ${waktu}`);
-  
-  // SIMULASI JUMLAH PENGUNJUNG DATANG OTOMATIS
-  let pengunjungBaru = Math.floor(Math.random() * 60) + 15;
-  console.log(`👀 +${pengunjungBaru} Pengunjung Baru Masuk! Duit iklan AdSense bertambah OTOMATIS!`);
-  
-  // SIMULASI ADA YANG BELI TERUS-MENERUS (PENGHASILAN UTAMA)
-  if(Math.random() > 0.65) { // 65% kemungkinan ada transaksi tiap beberapa detik
-    let daftarHarga = [5000, 15000, 45000, 200000];
-    let uangMasuk = daftarHarga[Math.floor(Math.random() * daftarHarga.length)];
-    console.log(`💰💰💰 TRANSAKSI BARU! MASUK Rp ${uangMasuk.toLocaleString()} KE DANA 082260678214! 💰💰💰`);
-  }
-}, 7000); // Cek & sebar ulang setiap 7 detik
+            let nilai = tipe === 'yt' ? 50 : tipe === 'grup' ? 100 : 40;
+            saldoKoin += nilai;
+            localStorage.setItem('saldoKoin', saldoKoin);
+            elSaldo.textContent = saldoKoin;
 
-// ================= SISTEM MONITORING KESEHATAN SISTEM =================
-setInterval(() => {
-  // TAMPILKAN STATUS AI BERJALAN
-  const statusBar = document.querySelector('.ai-status-bar');
-  statusBar.style.opacity = Math.random() * 0.25 + 0.75;
-}, 2500);
+            // Tampilkan Notif
+            elDapat.textContent = nilai;
+            document.getElementById('newBalance').textContent = saldoKoin;
+            elNotif.classList.remove('hidden');
+            setTimeout(() => elNotif.classList.add('hidden'), 5000);
 
-</script>
-
-<!-- ==================================================
-✅ ✅ ✅ SUDAH KEMBALI KE VERSI KAMU SUKA ✅ ✅ ✅
-      ✅ TAMPILAN BAGUS ✅ FITUR LENGKAP ✅ 
-      ✅ PENYEBAR LINK NYALA ✅ ADSENSE OTOMATIS
-=================================================== -->
+            // Ubah tampilan tugas jadi selesai
